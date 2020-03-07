@@ -9,31 +9,33 @@ This instruction assumes that you are using Ubuntu Linux 18.04 LTS.
 You should run `apt install <package_name>` to install the following packages
 on your Ubuntu Linux.
 
-  * Building tools:
-    * git
-    * gcc/g++
-    * binutils
-    * autoconf/automake
-    * libtool
-    * make
-    * cmake
-    * pkg-config
- * Dependent libraries:
-    * libgtk2.0-dev
-    * libjpeg-dev
-    * libpng-dev (libpng12-dev on Ubuntu Linux 16.04 instead)
-    * libfreetype6-dev
-    * libinput-dev
-    * libdrm-dev
-    * libsqlite3-dev
-    * libxml2-dev
-    * libssl1.0-dev
+* Building tools:
+   * git
+   * gcc/g++
+   * binutils
+   * autoconf/automake
+   * libtool
+   * make
+   * cmake
+   * pkg-config
+* Dependent libraries:
+   * libgtk2.0-dev
+   * libjpeg-dev
+   * libpng-dev (libpng12-dev on Ubuntu Linux 16.04 instead)
+   * libfreetype6-dev
+   * libinput-dev
+   * libdrm-dev
+   * libsqlite3-dev
+   * libxml2-dev
+   * libssl1.0-dev
 
 You can run the following commands to install all above software packages on Ubuntu 18.04:
 
-    $ sudo apt install git g++ binutils autoconf automake libtool make cmake pkg-config
-    $ sudo apt install libgtk2.0-dev libjpeg-dev libpng-dev libfreetype6-dev
-    $ sudo apt install libinput-dev libdrm-dev libsqlite3-dev libxml2-dev libssl1.0-dev
+```
+$ sudo apt install git g++ binutils autoconf automake libtool make cmake pkg-config
+$ sudo apt install libgtk2.0-dev libjpeg-dev libpng-dev libfreetype6-dev
+$ sudo apt install libinput-dev libdrm-dev libsqlite3-dev libxml2-dev libssl1.0-dev
+```
 
 Note that the `libgtk2.0-dev` packages is used by the virtual frame buffer program `gvfb`.
 
@@ -43,24 +45,24 @@ Please make sure that you can visit GitHub and you can do `sudo` on your Linux b
 
 1. Copy `config.sh` to `myconfig.sh` and edit `myconfig.sh` to match your needs:
 
-        $ cp config.sh myconfig.sh
+    $ cp config.sh myconfig.sh
 
 1. Run `fetch-all.sh` to fetch all source from GitHub:
 
-        $ ./fetch-all.sh
+    $ ./fetch-all.sh
 
 1. Run `build-deps.sh` to build and install gvfb, chipmunk, and harfbuzz:
 
-        $ ./build-deps.sh
+    $ ./build-deps.sh
 
 1. Run `build-all.sh` to build all:
 
-        $ ./build-minigui.sh
+    $ ./build-minigui.sh
 
 1. Run `mguxdemo`:
 
-        $ cd cell-phone-ux-demo/
-        $ ./mginit
+    $ cd cell-phone-ux-demo/
+    $ ./mginit
 
 When there were some updates in the remote repos, you can run `update-all.sh` to
 update them. You can run `clean-all.sh` to uninstall and clean them.
@@ -96,6 +98,19 @@ without support for cursor, you can use the following command:
 
     $ ./build-minigui.sh sa -cursor
 
+### Notes for demos
+
+Note that if you configured MiniGUI other than MiniGUI-Processes runtime mode,
+please use the following commands to run `mguxdemo`
+
+```
+$ cd cell-phone-ux-demo/
+$ ./mguxdemo
+```
+
+You can also run other samples, demos, and test programs, in `mg-samples`,
+`mg-demos` or `mg-tests`.
+
 ## Commands to build dependencies
 
 The following steps are those ones in `build-deps.sh`. We list them here just
@@ -103,27 +118,33 @@ for your information:
 
 1. Make and install `gvfb`:
 
-        $ cd gvfb
-        $ cmake .
-        $ make; sudo make install
-        $ cd ..
+```
+$ cd gvfb
+$ cmake .
+$ make; sudo make install
+$ cd ..
+```
 
 1. Make and install `chipmunk` library (DO NOT use the chipmunk-dev package
    which is provided by Ubuntu):
 
-        $ cd 3rd-party/chipmunk
-        $ cmake .
-        $ make; sudo make install
-        $ cd ../..
+```
+$ cd 3rd-party/chipmunk
+$ cmake .
+$ make; sudo make install
+$ cd ../..
+```
 
 1. Make and install `harfbuzz` library (DO NOT use the harfbuzz-dev package
    which is provided by Ubuntu):
 
-        $ cd 3rd-party/harfbuzz
-        $ ./autogen.sh
-        $ ./config-extern.sh
-        $ make; sudo make install
-        $ cd ../..
+```
+$ cd 3rd-party/harfbuzz
+$ ./autogen.sh
+$ ./config-extern.sh
+$ make; sudo make install
+$ cd ../..
+```
 
 ## Change Log
 

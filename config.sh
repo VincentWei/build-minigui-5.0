@@ -17,20 +17,17 @@ REPO_URL=https://github.com/VincentWei
 # REPO_URL=git4os@gitlab.fmsoft.cn:VincentWei
 
 #
-# The branch name; MiniGUI 5.0 is not stable, it is now in dev-4-1 branch.
+# The branch name; MiniGUI 5.0 is in preview stage, and the code is
+# located in dev-4-1 branch
 BRANCH_NAME=dev-4-1
 
 #
-# Global configuration options
+# Global configuration options for MiniGUI Core and components.
 # GOPTS="--enable-develmode"
 GOPTS=
 
 #
-# The runtime mode of MiniGUI; can be ths, procs, or sa.
-RUNMODE=ths
-
-#
-# extra options for configuring MiniGUI core.
+# extra options for configuring MiniGUI Core.
 # MGOPTS="--with-targetname=external"
 MGOPTS=
 

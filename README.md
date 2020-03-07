@@ -29,9 +29,13 @@ on your Ubuntu Linux.
     * libxml2-dev
     * libssl1.0-dev
 
-You can run the following command to install all above software packages on Ubuntu 18.04:
+You can run the following commands to install all above software packages on Ubuntu 18.04:
 
-    $ sudo apt install git g++ binutils autoconf automake libtool make cmake pkg-config libgtk2.0-dev libjpeg-dev libpng-dev libfreetype6-dev libinput-dev libdrm-dev libsqlite3-dev libxml2-dev libssl1.0-dev
+    $ sudo apt install git g++ binutils autoconf automake libtool make cmake pkg-config
+    $ sudo apt install libgtk2.0-dev libjpeg-dev libpng-dev libfreetype6-dev
+    $ sudo apt install libinput-dev libdrm-dev libsqlite3-dev libxml2-dev libssl1.0-dev
+
+Note that the `libgtk2.0-dev` packages is used by the virtual frame buffer program `gvfb`.
 
 ## Steps
 
@@ -51,24 +55,51 @@ Please make sure that you can visit GitHub and you can do `sudo` on your Linux b
 
 1. Run `build-all.sh` to build all:
 
-        $ ./build-all.sh
+        $ ./build-minigui.sh
 
 1. Run `mguxdemo`:
 
-        $ cd /usr/local/bin
-        $ ./mguxdemo
+        $ cd cell-phone-ux-demo/
+        $ ./mginit
 
 When there were some updates in the remote repos, you can run `update-all.sh` to
-update them. You can run `clean-build-all.sh` to uninstall, clean,
-and re-install them.
+update them. You can run `clean-all.sh` to uninstall and clean them.
 
 Note that you might need to run `ldconfig` to refresh the shared libraries cache
-when running `mguxdemo`.
+before running `mguxdemo` or other MiniGUI applications.
+
+### Options for build-minigui.sh script
+
+You can pass some options to `build-minigui.sh` script to specify the
+compile-time configuration options of MiniGUI Core.
+
+If you did not specify the options, it will use the following default options:
+
+    procs compositing virtualwindow
+
+The options above means:
+
+- `procs`: build MiniGUI runs under MiniGUI-Processes runtime mode.
+- `compositing`: build MiniGUI to use compositing schema.
+- `virtualwindow`: enable the virtual window feature.
+
+The script uses a simple method for the traditional autoconf options:
+
+- The first options always specifies the runtime mode of MiniGUI, you should
+  choose one from `procs`, `ths`, or `sa`, which represent MiniGUI-Processes,
+  MiniGUI-Threads, and MiniGUI-Standalone runtime modes respectively.
+- If you specify an option with a prefix `-`, the feature will be disabled;
+  otherwise it is enabled.
+
+For example, if you want to build MiniGUI as standalone runtime mode and
+without support for cursor, you can use the following command:
+
+    $ ./build-minigui.sh sa -cursor
 
 ## Commands to build dependencies
 
-The following steps are those ones in `build-deps.sh`. We list them here for
-your information:
+The following steps are those ones in `build-deps.sh`. We list them here just
+for your information:
 
 1. Make and install `gvfb`:
 
@@ -94,14 +125,14 @@ your information:
         $ make; sudo make install
         $ cd ../..
 
-## ChangeLog
+## Change Log
 
-Currently, this repo just includes some scripts to build MiniGUI 4.0.x
+Currently, this repo just includes some scripts to build MiniGUI 5.0.x
 core, components, and demonstration apps.
 
 ## Copying
 
-Copyright (C) 2019 Beijing FMSoft Technologies Co., Ltd.
+Copyright (C) 2020 Beijing FMSoft Technologies Co., Ltd.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -140,6 +171,6 @@ Please refer to the `LICENSE` or `COPYING` files in the source trees for more
 information.
 
 Note that the software fetched from remote repositories may use different
-licenses.  Please refer to the `LICENSE` or `COPYING` files in the sorce trees
-for more information.
+licenses.  Please refer to the `LICENSE` or `COPYING` files in the source
+trees for more information.
 

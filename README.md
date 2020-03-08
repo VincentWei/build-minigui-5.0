@@ -129,29 +129,41 @@ Please make sure that you can visit GitHub and you can do `sudo` on your Linux b
 
 1. Clone this repo from GitHub:
 
-    $ git clone https://github.com/VincentWei/build-minigui-5.0.git
-    $ cd build-minigui-5.0/
+```
+$ git clone https://github.com/VincentWei/build-minigui-5.0.git
+$ cd build-minigui-5.0/
+```
 
 1. Copy `config.sh` to `myconfig.sh` and edit `myconfig.sh` to match your needs:
 
-    $ cp config.sh myconfig.sh
+```
+$ cp config.sh myconfig.sh
+```
 
 1. Run `fetch-all.sh` to fetch all source from GitHub:
 
-    $ ./fetch-all.sh
+```
+$ ./fetch-all.sh
+```
 
 1. Run `build-deps.sh` to build and install gvfb, chipmunk, and harfbuzz:
 
-    $ ./build-deps.sh
+```
+$ ./build-deps.sh
+```
 
 1. Run `build-all.sh` to build all:
 
-    $ ./build-minigui.sh
+```
+$ ./build-minigui.sh
+```
 
 1. Run `mguxdemo`:
 
-    $ cd cell-phone-ux-demo/
-    $ ./mginit
+```
+$ cd cell-phone-ux-demo/
+$ ./mginit
+```
 
 When there were some updates in the remote repos, you can run `update-all.sh` to
 update them. You can run `clean-all.sh` to uninstall and clean them.
@@ -166,7 +178,9 @@ compile-time configuration options of MiniGUI Core.
 
 If you did not specify the options, it will use the following default options:
 
-    procs compositing virtualwindow
+```
+procs compositing virtualwindow
+```
 
 The options above means:
 
@@ -185,7 +199,9 @@ The script uses a simple method for the traditional autoconf options:
 For example, if you want to build MiniGUI as standalone runtime mode and
 without support for cursor, you can use the following command:
 
-    $ ./build-minigui.sh sa -cursor
+```
+$ ./build-minigui.sh sa -cursor
+```
 
 ### Notes for demos
 
@@ -204,9 +220,7 @@ $ cd mg-tests/compositing/
 $ ./mginit trackbar
 ```
 
-![welcome to MiniGUI 5.0](images/welcome-wallpaper.png)
-
----
+![Welcome to MiniGUI 5.0](images/welcome-wallpaper.png)
 
 or
 

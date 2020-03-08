@@ -83,6 +83,7 @@ features to develop:
 - Adjust common GAL engines to support compositing schema.
 - A sample compositor with animation.
 - More test programs for new features and new APIs.
+- Some documents for usage of new features/APIs.
 
 ## Prerequisites
 
@@ -192,8 +193,12 @@ For the sample of compisiting schema, please refer to `mg-tests`:
 
 ```
 $ cd mg-tests/compositing/
-$ ./mginit welcome
+$ ./mginit trackbar
 ```
+
+![welcome to MiniGUI 5.0](images/welcome-wallpaper.png)
+
+---
 
 or
 
@@ -201,6 +206,8 @@ or
 $ cd mg-tests/compositing/
 $ ./mginit auto
 ```
+
+![Dynamic Wallpaper](images/dynamic-wallpaper.png)
 
 You can also run other samples, demos, or test programs in `mg-samples`,
 `mg-demos` or `mg-tests`.

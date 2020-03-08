@@ -18,8 +18,11 @@ This instruction assumes that you are using Ubuntu Linux 18.04 LTS.
 
 ## Current Status
 
-Currently, MiniGUI 5.0 is under development. This is the first preview
-release of MiniGUI 5.0.0. The actual version number is 4.9.0.
+Currently, MiniGUI 5.0 is still under active development. We hope we can
+release the official version about in one month.
+
+This is the first preview release of MiniGUI 5.0.0. The actual version number
+is 4.9.0.
 
 Main enhancements of MiniGUI Core and its components are as follow:
 

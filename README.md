@@ -152,7 +152,7 @@ $ ./fetch-all.sh
 $ ./build-deps.sh
 ```
 
-1. Run `build-all.sh` to build all:
+1. Run `build-minigui.sh` to build MiniGUI 5.0:
 
 ```
 $ ./build-minigui.sh
@@ -190,7 +190,7 @@ The options above means:
 
 The script uses a simple method for the traditional autoconf options:
 
-- The first options always specifies the runtime mode of MiniGUI, you should
+- The first option always specifies the runtime mode of MiniGUI, you should
   choose one from `procs`, `ths`, or `sa`, which represent MiniGUI-Processes,
   MiniGUI-Threads, and MiniGUI-Standalone runtime modes respectively.
 - If you specify an option with a prefix `-`, the feature will be disabled;

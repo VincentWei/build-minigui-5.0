@@ -27,54 +27,57 @@ is 4.9.0.
 Main enhancements of MiniGUI Core and its components are as follow:
 
 - MiniGUI Core:
-   - Support for compositing schema under MiniGUI-Processes runtime mode.
+   + Support for compositing schema under MiniGUI-Processes runtime mode.
      This feature brings the exciting visual effects which are popular
      on modern desktop computers or smart phones to MiniGUI.
-   - New main window types/levels. You now can easily create main windows
+   + New main window types/levels. You now can easily create main windows
      in different z-order levels. This enhancement allows us to create
      a special app which acts as screen lock, docker, or launcher.
-   - Virtual Window. You now can easily create message threads under all
+   + Virtual Window. You now can easily create message threads under all
      runtime modes to exploit the messaging mechanism of MiniGUI in
      non GUI threads - we call them message threads.
-   - Enhanced timer support. MiniGUI now manages the timers per message thread.
+   + Enhanced timer support. MiniGUI now manages the timers per message thread.
      Under MiniGUI-Threads runtime mode, you can set up 32 (64 on 64-bit
      architecture) timers for each GUI threads. If you enabled virtual window,
      you can also do this for each message thread.
-   - Support for listening a file descriptor as long as the underlying system
+   + Support for listening a file descriptor as long as the underlying system
      has the `select()` system call for all runtime modes. Now you can call
      `RegisterListenFD()` to register a file descriptor to be listened, and
      handle `MSG_FDEVENT` in your window callback procedure to read/write
      from/to the file descriptor. Before this version, this feature only
      available for MiniGUI-Processes runtime mode.
-   - Support for local data of windows. You can now set or retrieve a local data
+   + Support for local data of windows. You can now set or retrieve a local data
      which is bound with a string name for a window. This will give you an
      eays-to-use interface to manage various data of a window.
-   - Support for hardware cursors under compositing schema. MiniGUI now can
+   + Support for hardware cursors under compositing schema. MiniGUI now can
      utilize the hardware cursors if your graphics device support it.
      You can also load a cursor from a PNG file.
-   - Support for loading icon from a bitmap file. You can now load an icon
+   + Support for loading icon from a bitmap file. You can now load an icon
      from a bitmap file such as a PNG file.
-   - Unified the message hook functions for all runtime modes. MiniGUI now
+   + Unified the message hook functions for all runtime modes. MiniGUI now
      provides the consistent message hook functions for all runtime modes.
-   - Use the update regions for cumulative updating the screen. This will
+   + Use the update regions for cumulative updating the screen. This will
      emilinate the flickers due to the frequently redrawning of controls.
-   - Cleaned up a lot of internal symbols (the external functions and
+   + Cleaned up a lot of internal symbols (the external functions and
      global variables) in order to avoid name polution.
-   - Refactored the code for the following modules: z-order management,
+   + Refactored the code for the following modules: z-order management,
      message queue, event/message handling, and part of graphics abstract
      layer.
-   - Some new APIs.
-   - For more information, please refer to:
+   + Some new APIs.
+   + For more information, please refer to:
      <https://github.com/VincentWei/minigui/blob/dev-4-1/RELEASE-NOTES.md>
 - mGEff, mGUtils, mGPlus, and mGNCS
-   - Tune code for MiniGUI 5.0.0 or later.
-   - Cleanup code for bad symbols.
+   + Tune code for MiniGUI 5.0.0 or later.
+   + Cleanup code for bad symbols.
 - mGNCS4Touch
-   - Tune code to comply with MiniGUI 5.0.0 and mGEff 1.5.0.
-   - Tune the speed meter.
-   - Enhance `ScrollViewPiece` and `HScrollViewPiece`.
+   + Tune code to comply with MiniGUI 5.0.0 and mGEff 1.5.0.
+   + Tune the speed meter.
+   + Enhance `ScrollViewPiece` and `HScrollViewPiece`.
 - mg-tests:
-   - Add new test programs for MiniGUI 5.0.0 in `5.0/` directory.
+   + Add new test programs for MiniGUI 5.0.0 in `5.0/` directory.
+- gvfb:
+   + Enhanced to use double buffering to support SyncUpdate method.
+   + Enhanced to simulate the hardware cursors.
 
 ### TODO list
 

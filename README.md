@@ -6,11 +6,12 @@ This instruction assumes that you are using Ubuntu Linux 18.04 LTS.
 
 - [Current Status](#current-status)
    + [TODO list](#todo-list)
-- [Prerequisites](#prerequisites)
-- [Steps](#steps)
+- [Building MiniGUI 5.0](#building-minigui-50)
+   + [Prerequisites](#prerequisites)
+   + [Building steps](#buidling-steps)
    + [Options for build-minigui.sh script](#options-for-build-miniguish-script)
    + [Notes for demos](#notes-for-demos)
-- [Commands to build dependencies](#commands-to-build-dependencies)
+   + [Commands to build dependencies](#commands-to-build-dependencies)
 - [Change Log](#change-log)
 - [Copying](#copying)
    + [Special Statement](#special-statement)
@@ -91,7 +92,9 @@ features to develop:
 - More test programs for new features and new APIs.
 - Some documents for usage of new features/APIs.
 
-## Prerequisites
+## Building MiniGUI 5.0
+
+### Prerequisites
 
 You should run `apt install <package_name>` to install the following packages
 on your Ubuntu Linux.
@@ -126,7 +129,7 @@ $ sudo apt install libinput-dev libdrm-dev libsqlite3-dev libxml2-dev libssl1.0-
 
 Note that the `libgtk2.0-dev` packages is used by the virtual frame buffer program `gvfb`.
 
-## Steps
+### Buiding steps
 
 Please make sure that you can visit GitHub and you can do `sudo` on your Linux box.
 
@@ -185,7 +188,7 @@ If you did not specify the options, it will use the following default options:
 procs compositing virtualwindow
 ```
 
-The options above means:
+The options above have the following meanings:
 
 - `procs`: build MiniGUI runs under MiniGUI-Processes runtime mode.
 - `compositing`: build MiniGUI to use compositing schema.
@@ -208,15 +211,7 @@ $ ./build-minigui.sh sa -cursor
 
 ### Notes for demos
 
-Note that if you configured MiniGUI other than MiniGUI-Processes runtime mode,
-please use the following commands to run `mguxdemo`
-
-```
-$ cd cell-phone-ux-demo/
-$ ./mguxdemo
-```
-
-For the sample of compisiting schema, please refer to `mg-tests`:
+For the sample of compositing schema, please refer to `mg-tests`:
 
 ```
 $ cd mg-tests/compositing/
@@ -237,7 +232,15 @@ $ ./mginit auto
 You can also run other samples, demos, or test programs in `mg-samples`,
 `mg-demos` or `mg-tests`.
 
-## Commands to build dependencies
+Note that if you configured MiniGUI as a runtime mode other than
+MiniGUI-Processes, please use the following commands to run `mguxdemo`
+
+```
+$ cd cell-phone-ux-demo/
+$ ./mguxdemo
+```
+
+### Commands to build dependencies
 
 The following steps are those ones in `build-deps.sh`. We list them here just
 for your information:
@@ -279,7 +282,7 @@ core, components, and demonstration apps.
 
 ## Copying
 
-Copyright (C) 2020 Beijing FMSoft Technologies Co., Ltd.
+Copyright (C) 2018 ~ 2020 Beijing FMSoft Technologies Co., Ltd.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by

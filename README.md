@@ -127,6 +127,11 @@ Note that the `libgtk2.0-dev` packages is used by the virtual frame buffer progr
 
 Please make sure that you can visit GitHub and you can do `sudo` on your Linux box.
 
+1. Clone this repo from GitHub:
+
+    $ git clone https://github.com/VincentWei/build-minigui-5.0.git
+    $ cd build-minigui-5.0/
+
 1. Copy `config.sh` to `myconfig.sh` and edit `myconfig.sh` to match your needs:
 
     $ cp config.sh myconfig.sh

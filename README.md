@@ -22,8 +22,8 @@ This instruction assumes that you are using Ubuntu Linux 18.04 LTS.
 Currently, MiniGUI 5.0 is still under active development. We hope we can
 release the official version about in one month.
 
-This is the first preview release of MiniGUI 5.0.0. The actual version number
-is 4.9.0.
+This is the second preview release of MiniGUI 5.0.0. The actual version number
+is 4.9.1.
 
 Main enhancements of MiniGUI Core and its components are as follow:
 
@@ -64,6 +64,8 @@ Main enhancements of MiniGUI Core and its components are as follow:
    + Refactored the code for the following modules: z-order management,
      message queue, event/message handling, and part of graphics abstract
      layer.
+   + Enhance the NEWGAL engine `fbcon` (the legacy Linux frame buffer) to
+     support compositing schema.
    + Some new APIs.
    + For more information, please refer to:
      <https://github.com/VincentWei/minigui/blob/dev-4-1/RELEASE-NOTES.md>
@@ -85,11 +87,13 @@ Main enhancements of MiniGUI Core and its components are as follow:
 Before we release the official version 5.0.0, there are still some new
 features to develop:
 
-- Enhance DRM GAL engines to support MiniGUI-Processes runtime mode
+- Enhance DRM engine to support MiniGUI-Processes runtime mode
   and compositing schema.
-- Adjust common GAL engines to support compositing schema.
+- Tune COMMLCD engine and other common engines for changes of GAL.
+
+Other things to do in the near future:
+
 - A sample compositor with animation.
-- More test programs for new features and new APIs.
 - Some documents for usage of new features/APIs.
 
 ## Building MiniGUI 5.0

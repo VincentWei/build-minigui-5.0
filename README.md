@@ -129,7 +129,7 @@ $ sudo apt install libinput-dev libdrm-dev libsqlite3-dev libxml2-dev libssl1.0-
 
 Note that the `libgtk2.0-dev` packages is used by the virtual frame buffer program `gvfb`.
 
-### Buiding steps
+### Building steps
 
 Please make sure that you can visit GitHub and you can do `sudo` on your Linux box.
 

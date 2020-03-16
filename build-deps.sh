@@ -29,3 +29,4 @@ echo "INSTALL MiniGUI resource files"
 cd minigui-res/
 ./autogen.sh && ./configure && make && sudo make install
 cd ..
+

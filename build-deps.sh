@@ -24,3 +24,8 @@ cd 3rd-party/harfbuzz
 ./config-extern.sh
 make -j$NR_JOBS; sudo make install
 cd ../..
+
+echo "INSTALL MiniGUI resource files"
+cd minigui-res/
+./autogen.sh && ./configure && make && sudo make install
+cd ..

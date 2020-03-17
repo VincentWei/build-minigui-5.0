@@ -6,6 +6,9 @@ fi
 
 source myconfig.sh
 
+# always enable develmode for this script
+GOPTS="--enable-develmode"
+
 RUNMODE="CURRENT RUNTIME INSTALLED"
 
 check_minigui_components() {

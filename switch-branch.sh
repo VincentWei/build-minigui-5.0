@@ -1,6 +1,6 @@
 #!/bin/bash
 
-branch=rel-4-0
+branch=master
 
 if [ ! -f myconfig.sh ]; then
     cp config.sh myconfig.sh
@@ -9,9 +9,9 @@ fi
 source myconfig.sh
 
 for comp in minigui-res mg-samples minigui mgutils mgplus mgeff mgncs mgncs4touch mg-tests mg-demos; do
-    echo "MAKING TAG IN $comp..."
+    echo "checkout branch $branch for $comp..."
     cd $comp
-    git pull && git checkout rel-4-0
+    git checkout $branch && git pull
     cd ..
 done
 

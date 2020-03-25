@@ -19,11 +19,8 @@ This instruction assumes that you are using Ubuntu Linux 18.04 LTS.
 
 ## Current Status
 
-Currently, MiniGUI 5.0 is still under active development. We hope we can
-release the official version about in one month.
-
-This is the second preview release of MiniGUI 5.0.0. The actual version number
-is 4.9.1.
+Currently, we have released the MiniGUI 5.0.0 as the first official release
+of MiniGUI 5.0.x.
 
 Main enhancements of MiniGUI Core and its components are as follow:
 
@@ -78,23 +75,33 @@ Main enhancements of MiniGUI Core and its components are as follow:
    + Enhance `ScrollViewPiece` and `HScrollViewPiece`.
 - mg-tests:
    + Add new test programs for MiniGUI 5.0.0 in `5.0/` directory.
+   + Add new test programs for compositing schema in `compositor/` directory.
 - gvfb:
-   + Enhanced to use double buffering to support SyncUpdate method.
+   + Enhanced to use double buffering to support `SyncUpdate` method.
    + Enhanced to simulate the hardware cursors.
 
-### TODO list
+### Known issues
 
-Before we release the official version 5.0.0, there are still some new
-features to develop:
+The following known issues all above hardware cursor of DRM engine:
 
-- Enhance DRM engine to support MiniGUI-Processes runtime mode
-  and compositing schema.
-- Tune COMMLCD engine and other common engines for changes of GAL.
+- `drmSetCursor2` and `drmMoveCursor` do not work correctly in DRM engine.
+  Libdrm does not provide an interface to set the correct cursor plane, and
+  it seems that X held the cursor plane.
+- When using a AR24 plane for cursor, `drmSetPlane` seems having a bad
+  performance.
 
-Other things to do in the near future:
+### Upcoming features
 
-- A sample compositor with animation.
-- Some documents for usage of new features/APIs.
+We plan to develop the following features in the subsequent releases:
+
+- MiniGUI 5.0.x:
+   + A comprehensive demonstration program for compositing schema and
+     a sample compositor with animations.
+   + Clean code of other frequently-used GAL/IAL engines.
+- MiniGUI 5.2.x:
+   + Support for the `WS_MAXIMIZE` and `WS_MINIMIZE` styles.
+   + Tune the input method framework for MiniGUI-Processes runtime mode,
+     so that the input method engine can run as a seperate process.
 
 ## Building MiniGUI 5.0
 

@@ -26,7 +26,7 @@ of MiniGUI 5.0.x.
 
 Note that we have changed the branch for MiniGUI 5.0.0 from `dev-4-1` to
 `rel-5-0`. If you have ever fetched the code from the branch `dev-4-1`,
-please run the following script the switch the branch to `rel-5-0`:
+please run the following script to switch the branch to `rel-5-0`:
 
 ```
 $ ./switch-to-release-branch.sh
@@ -74,8 +74,6 @@ Main enhancements of MiniGUI Core and its components are as follow:
    + Enhance the NEWGAL engine `fbcon` (the legacy Linux frame buffer) to
      support compositing schema.
    + Some new APIs.
-   + For more information, please refer to:
-     <https://github.com/VincentWei/minigui/blob/dev-4-1/RELEASE-NOTES.md>
 - mGEff, mGUtils, mGPlus, and mGNCS
    + Tune code for MiniGUI 5.0.0 or later.
    + Cleanup code for bad symbols.
@@ -89,6 +87,12 @@ Main enhancements of MiniGUI Core and its components are as follow:
 - gvfb:
    + Enhanced to use double buffering to support `SyncUpdate` method.
    + Enhanced to simulate the hardware cursors.
+
+For more information, please refer to the release notes:
+
+- MiniGUI Core: <https://github.com/VincentWei/minigui/blob/rel-5-0/RELEASE-NOTES.md>
+- mGEff: <https://github.com/VincentWei/mgeff/blob/rel-5-0/RELEASE-NOTES.md>
+- mGNCS4Touch: <https://github.com/VincentWei/mgeff/blob/rel-5-0/RELEASE-NOTES.md>
 
 ### Known issues
 

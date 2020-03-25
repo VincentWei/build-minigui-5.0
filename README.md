@@ -92,7 +92,7 @@ For more information, please refer to the release notes:
 
 - MiniGUI Core: <https://github.com/VincentWei/minigui/blob/rel-5-0/RELEASE-NOTES.md>
 - mGEff: <https://github.com/VincentWei/mgeff/blob/rel-5-0/RELEASE-NOTES.md>
-- mGNCS4Touch: <https://github.com/VincentWei/mgeff/blob/rel-5-0/RELEASE-NOTES.md>
+- mGNCS4Touch: <https://github.com/VincentWei/mgncs4touch/blob/rel-5-0/RELEASE-NOTES.md>
 
 ### Known issues
 

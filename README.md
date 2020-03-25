@@ -96,7 +96,7 @@ For more information, please refer to the release notes:
 
 ### Known issues
 
-The following known issues all above hardware cursor of DRM engine:
+The following known issues all about hardware cursor of DRM engine:
 
 - `drmSetCursor2` and `drmMoveCursor` do not work correctly in DRM engine.
   Libdrm does not provide an interface to set the correct cursor plane, and

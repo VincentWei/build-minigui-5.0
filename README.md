@@ -5,10 +5,11 @@ This repo contains some scripts to fetch and build MiniGUI 5.0.x
 This instruction assumes that you are using Ubuntu Linux 18.04 LTS.
 
 - [Current Status](#current-status)
-   + [TODO list](#todo-list)
+   + [Known issues](#known-issues)
+   + [Upcoming features](#upcoming-features)
 - [Building MiniGUI 5.0](#building-minigui-50)
    + [Prerequisites](#prerequisites)
-   + [Building steps](#buidling-steps)
+   + [Building steps](#building-steps)
    + [Options for build-minigui.sh script](#options-for-build-miniguish-script)
    + [Notes for demos](#notes-for-demos)
    + [Commands to build dependencies](#commands-to-build-dependencies)
@@ -17,10 +18,14 @@ This instruction assumes that you are using Ubuntu Linux 18.04 LTS.
    + [Special Statement](#special-statement)
    + [Other Notes](#other-notes)
 
+
 ## Current Status
 
 Currently, we have released the MiniGUI 5.0.0 as the first official release
 of MiniGUI 5.0.x.
+
+Note that we will change the branch for MiniGUI 5.0.0 from `dev-4-1` to
+`rel-5-0` when we release it.
 
 Main enhancements of MiniGUI Core and its components are as follow:
 

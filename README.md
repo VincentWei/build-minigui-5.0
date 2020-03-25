@@ -24,8 +24,13 @@ This instruction assumes that you are using Ubuntu Linux 18.04 LTS.
 Currently, we have released the MiniGUI 5.0.0 as the first official release
 of MiniGUI 5.0.x.
 
-Note that we will change the branch for MiniGUI 5.0.0 from `dev-4-1` to
-`rel-5-0` when we release it.
+Note that we have changed the branch for MiniGUI 5.0.0 from `dev-4-1` to
+`rel-5-0`. If you have ever fetched the code from the branch `dev-4-1`,
+please run the following script the switch the branch to `rel-5-0`:
+
+```
+$ ./switch-to-release-branch.sh
+```
 
 Main enhancements of MiniGUI Core and its components are as follow:
 

@@ -11,7 +11,7 @@ source myconfig.sh
 for comp in minigui-res mg-samples minigui mgutils mgplus mgeff mgncs mgncs4touch mg-tests mg-demos; do
     echo "checkout branch $branch for $comp..."
     cd $comp
-    git branch $branch && git pull && git checkout $branch
+    git branch $branch; git pull && git checkout $branch
     cd ..
 done
 

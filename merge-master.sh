@@ -1,6 +1,6 @@
 #!/bin/bash
 
-branch=dev-4-1
+branch=rel-5-0
 
 if [ ! -f myconfig.sh ]; then
     cp config.sh myconfig.sh

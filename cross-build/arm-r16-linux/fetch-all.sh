@@ -62,10 +62,9 @@ tar xvJf util-linux_2.31.1.orig.tar.xz
 rm -f util-linux_2.31.1.orig.tar.xz
 
 # get libinput-dev
-# wget https://www.freedesktop.org/software/libinput/libinput-1.10.0.tar.xz
-wget http://minigui.org/downloads/common/libinput_1.2.3.orig.tar.xz
-tar xvJf libinput_1.2.3.orig.tar.xz
-rm -f libinput_1.2.3.orig.tar.xz
+wget http://minigui.org/downloads/common/libinput-1.10.0.tar.xz
+tar xvJf libinput-1.10.0.tar.xz
+rm -f libinput-1.10.0.tar.xz
 
 # get libdrm-dev
 wget http://minigui.org/downloads/common/libdrm_2.4.99.orig.tar.gz

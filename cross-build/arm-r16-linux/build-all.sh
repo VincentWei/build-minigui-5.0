@@ -14,6 +14,12 @@ HEADER_DIR=$TINA_DIR/prebuilt/gcc/linux-x86/arm/toolchain-sunxi-glibc/toolchain/
 # It is the current directory.
 WORK_DIR=$(pwd)
 
+# change meson files before export variables.
+cd $WORK_DIR/3rd-party/libinput-1.10.0
+sudo patch -p1 < $WORK_DIR/libinput.patch
+sed "s#current_path#$WORK_DIR#g" ../../libinput.txt > cross_compile.txt
+meson --cross-file cross_compile.txt . builddir/ --prefix=$WORK_DIR/rootfs/usr/local --libdir=$WORK_DIR/rootfs/usr/local/lib
+
 # export some system varibles 
 export STAGING_DIR=$PLATFORM_DIR/staging_dir
 export CC=$(which arm-openwrt-linux-gcc)
@@ -137,9 +143,8 @@ echo "================= 12/23: libevdev is compiled ... ==================="
 # compile libinput 
 echo "================= 13/23: compiling libinput now ... ================="
 cd $WORK_DIR/3rd-party/libinput-1.10.0
-./configure --with-PACKAGE=no --enable-documentation=no --enable-event-gui=no --enable-tests=no --enable-libwacom=no CROSS_COMPILE="arm-openwrt-linux-muslgnueabi-"  --prefix=$WORK_DIR/rootfs/usr/local/ --host="arm-openwrt-linux" --target=arm-openwrt-linux LDFLAGS="-L$WORK_DIR/rootfs/usr/local/lib -L$STAGING_DIR/target/usr/lib -L$STAGING_DIR/target/lib " CFLAG="-Wl,-rpath=$WORK_DIR/rootfs/usr/local/lib "  CPPFLAGS="-I$WORK_DIR/rootfs/usr/local/include -I$STAGING_DIR/target/usr/include -I$TOOLCHAIN_DIR/usr/include -I$TOOLCHAIN_DIR/include  "
-make -j$NRJOBS
-sudo make install
+ninja -C builddir/
+sudo ninja -C builddir/ install
 echo "================= 13/23: libinput is compiled ... ==================="
 
 # compile libsqlite 
@@ -225,7 +230,7 @@ echo "================= 21/23: libmgncs4touch is compiled ... ============="
 echo "================= 22/23: compiling mg-samples now ... ==============="
 cd $WORK_DIR/mg-samples
 ./autogen.sh
-./configure CROSS_COMPILE="arm-openwrt-linux-muslgnueabi-" --target=arm-openwrt-linux --host=arm-openwrt-linux --build=x86_64-linux-gnu --program-prefix= --program-suffix= --prefix=$WORK_DIR/rootfs/usr/local --exec-prefix=$WORK_DIR/rootfs/usr/local --bindir=$WORK_DIR/rootfs/usr/local/bin --sbindir=$WORK_DIR/rootfs/usr/local/sbin --libexecdir=$WORK_DIR/rootfs/usr/local/lib --sysconfdir=$WORK_DIR/rootfs/usr/local/etc --datadir=$WORK_DIR/rootfs/usr/local/share --localstatedir=$WORK_DIR/rootfs/var --mandir=$WORK_DIR/rootfs/usr/local/man --infodir=$WORK_DIR/rootfs/usr/local/info --disable-nls LDFLAGS="-L$WORK_DIR/rootfs/usr/local/lib -L$STAGING_DIR/target/usr/lib -L$STAGING_DIR/target/lib " CFLAGS="-Wl,-rpath=$WORK_DIR/rootfs/usr/local/lib:$STAGING_DIR/target/usr/lib  " CPPFLAGS="-I$WORK_DIR/rootfs/usr/local/include -I$STAGING_DIR/target/usr/include -I$TOOLCHAIN_DIR/usr/include -I$TOOLCHAIN_DIR/include " MINIGUI_LIBS="-L$WORK_DIR/rootfs/usr/local/lib -ldrm -lminigui_ths -ljpeg -lm -lfreetype -lharfbuzzex" DRM_CFLAGS="-I$WORK_DIR/rootfs/usr/local/include " DRM_LIBS="-L$WORK_DIR/rootfs/usr/local/lib "
+./configure CROSS_COMPILE="arm-openwrt-linux-muslgnueabi-" --target=arm-openwrt-linux --host=arm-openwrt-linux --build=x86_64-linux-gnu --program-prefix= --program-suffix= --prefix=$WORK_DIR/rootfs/usr/local --exec-prefix=$WORK_DIR/rootfs/usr/local --bindir=$WORK_DIR/rootfs/usr/local/bin --sbindir=$WORK_DIR/rootfs/usr/local/sbin --libexecdir=$WORK_DIR/rootfs/usr/local/lib --sysconfdir=$WORK_DIR/rootfs/usr/local/etc --datadir=$WORK_DIR/rootfs/usr/local/share --localstatedir=$WORK_DIR/rootfs/var --mandir=$WORK_DIR/rootfs/usr/local/man --infodir=$WORK_DIR/rootfs/usr/local/info --disable-nls LDFLAGS="-L$WORK_DIR/rootfs/usr/local/lib -L$STAGING_DIR/target/usr/lib -L$STAGING_DIR/target/lib " CFLAGS="-Wl,-rpath=$WORK_DIR/rootfs/usr/local/lib:$STAGING_DIR/target/usr/lib  " CPPFLAGS="-I$WORK_DIR/rootfs/usr/local/include -I$STAGING_DIR/target/usr/include -I$TOOLCHAIN_DIR/usr/include -I$TOOLCHAIN_DIR/include " MINIGUI_LIBS="-L$WORK_DIR/rootfs/usr/local/lib -linput -ldrm -lminigui_ths -ljpeg -lm -lfreetype -lharfbuzzex" DRM_CFLAGS="-I$WORK_DIR/rootfs/usr/local/include " DRM_LIBS="-L$WORK_DIR/rootfs/usr/local/lib "
 make -j$NRJOBS
 sudo make install
 echo "================= 22/23: mg-tests is compiled ... ==================="
@@ -234,7 +239,7 @@ echo "================= 22/23: mg-tests is compiled ... ==================="
 echo "================= 23/23: compiling mg-demos now ... ================="
 cd $WORK_DIR/mg-demos
 ./autogen.sh
-./configure CROSS_COMPILE="arm-openwrt-linux-muslgnueabi-" --target=arm-openwrt-linux --host=arm-openwrt-linux --build=x86_64-linux-gnu --program-prefix= --program-suffix= --prefix=$WORK_DIR/rootfs/usr/local --exec-prefix=$WORK_DIR/rootfs/usr/local --bindir=$WORK_DIR/rootfs/usr/local/bin --sbindir=$WORK_DIR/rootfs/usr/local/sbin --libexecdir=$WORK_DIR/rootfs/usr/local/lib --sysconfdir=$WORK_DIR/rootfs/usr/local/etc --datadir=$WORK_DIR/rootfs/usr/local/share --localstatedir=$WORK_DIR/rootfs/var --mandir=$WORK_DIR/rootfs/usr/local/man --infodir=$WORK_DIR/rootfs/usr/local/info --disable-nls LDFLAGS="-L$WORK_DIR/rootfs/usr/local/lib -L$STAGING_DIR/target/usr/lib -L$STAGING_DIR/target/lib " CFLAGS="-Wl,-rpath=$WORK_DIR/rootfs/usr/local/lib:$STAGING_DIR/target/usr/lib  " CPPFLAGS="-I$WORK_DIR/rootfs/usr/local/include -I$STAGING_DIR/target/usr/include -I$TOOLCHAIN_DIR/usr/include -I$TOOLCHAIN_DIR/include " MINIGUI_LIBS="-L$WORK_DIR/rootfs/usr/local/lib -ldrm -lminigui_ths -ljpeg -lm -lfreetype -lharfbuzzex" DRM_CFLAGS="-I$WORK_DIR/rootfs/usr/local/include " DRM_LIBS="-L$WORK_DIR/rootfs/usr/local/lib "
+./configure CROSS_COMPILE="arm-openwrt-linux-muslgnueabi-" --target=arm-openwrt-linux --host=arm-openwrt-linux --build=x86_64-linux-gnu --program-prefix= --program-suffix= --prefix=$WORK_DIR/rootfs/usr/local --exec-prefix=$WORK_DIR/rootfs/usr/local --bindir=$WORK_DIR/rootfs/usr/local/bin --sbindir=$WORK_DIR/rootfs/usr/local/sbin --libexecdir=$WORK_DIR/rootfs/usr/local/lib --sysconfdir=$WORK_DIR/rootfs/usr/local/etc --datadir=$WORK_DIR/rootfs/usr/local/share --localstatedir=$WORK_DIR/rootfs/var --mandir=$WORK_DIR/rootfs/usr/local/man --infodir=$WORK_DIR/rootfs/usr/local/info --disable-nls LDFLAGS="-L$WORK_DIR/rootfs/usr/local/lib -L$STAGING_DIR/target/usr/lib -L$STAGING_DIR/target/lib " CFLAGS="-Wl,-rpath=$WORK_DIR/rootfs/usr/local/lib:$STAGING_DIR/target/usr/lib  " CPPFLAGS="-I$WORK_DIR/rootfs/usr/local/include -I$STAGING_DIR/target/usr/include -I$TOOLCHAIN_DIR/usr/include -I$TOOLCHAIN_DIR/include " MINIGUI_LIBS="-L$WORK_DIR/rootfs/usr/local/lib -linput -ldrm -lminigui_ths -ljpeg -lm -lfreetype -lharfbuzzex" DRM_CFLAGS="-I$WORK_DIR/rootfs/usr/local/include " DRM_LIBS="-L$WORK_DIR/rootfs/usr/local/lib "
 make -j$NRJOBS
 sudo make install
 echo "================= 23/23: mg-demos is compiled ... ==================="

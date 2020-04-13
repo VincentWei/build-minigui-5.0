@@ -1,0 +1,25 @@
+diff -Naur ./meson_options.txt ../gengyue/meson_options.txt
+--- ./meson_options.txt	2018-02-13 09:51:33.000000000 +0800
++++ ../gengyue/meson_options.txt	2020-04-13 16:26:22.721825431 +0800
+@@ -4,17 +4,17 @@
+        description: 'udev base directory [default=$prefix/lib/udev]')
+ option('libwacom',
+        type: 'boolean',
+-       value: true,
++       value: false,
+        description: 'Use libwacom for tablet identification (default=true)')
+ option('debug-gui',
+        type: 'boolean',
+-       value: true,
++       value: false,
+        description: 'Enable the "debug-gui" feature in the libinput tool [default=true]')
+ option('tests',
+        type: 'boolean',
+-       value: true,
++       value: false,
+        description: 'Build the tests [default=true]')
+ option('documentation',
+        type: 'boolean',
+-       value: true,
++       value: false,
+        description: 'Build the documentation [default=true]')

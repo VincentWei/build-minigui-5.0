@@ -300,6 +300,19 @@ $ make; sudo make install
 $ cd ../..
 ```
 
+## Cross Compile
+MiniGUI 5.0.x can run on lots of CPUs with different architechtures, such as
+ARM, MIPS and so on, after cross compiled. There is a directory named 
+"cross-build", in which there are some scripts for cross compile.
+
+As an example, there is a directory name "arm-r16-linux", which means: This
+directory is for ARM CPU --- r16, and the Operation System is Linux. In this
+directory, there are two scipts for download packages, and build MiniGUI 5.0.x 
+for ARM version. You can read the README.md in this directory in detail.
+
+Of course you can build your own directory for your developped CPU and OS.
+
+
 ## Change Log
 
 Currently, this repo just includes some scripts to build MiniGUI 5.0.x

@@ -1,0 +1,29 @@
+[binaries]
+c = 'arm-openwrt-linux-muslgnueabi-gcc'
+cpp = 'arm-openwrt-linux-muslgnueabi-g++'
+ar = 'arm-openwrt-linux-muslgnueabi-ar'
+strip = 'arm-openwrt-linux-muslgnueabi-strip'
+c_ld = 'arm-openwrt-linux-muslgnueabi-ld'
+cpp_ld = 'arm-openwrt-linux-muslgnueabi-ld'
+pkgconfig = 'pkg-config'
+
+[host_machine]
+system = 'linux'
+cpu_family = 'arm'
+cpu = 'R16-ARMv8'
+endian = 'little'
+
+[build_machine]
+system = 'linux'
+cpu_family = 'x86_64'
+cpu = 'i686'
+endian = 'little'
+
+[properties]
+c_args = ['-Icurrent_path/rootfs/usr/local/include']
+c_link_args = ['-Lcurrent_path/rootfs/usr/local/lib']
+cpp_args = ['-Icurrent_path/rootfs/usr/local/include']
+cpp_link_args = ['-Lcurrent_path/rootfs/usr/local/lib']
+
+[paths]
+prefix = 'current_path/rootfs/usr/local' 

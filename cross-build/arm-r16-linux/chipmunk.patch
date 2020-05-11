@@ -1,0 +1,120 @@
+diff -Naur ./constraints/cpDampedRotarySpring.h /home/gengyue/constraints/cpDampedRotarySpring.h
+--- ./constraints/cpDampedRotarySpring.h	2020-04-09 17:53:05.000000000 +0800
++++ /home/gengyue/constraints/cpDampedRotarySpring.h	2020-04-12 17:11:06.212380416 +0800
+@@ -21,7 +21,7 @@
+ 
+ typedef cpFloat (*cpDampedRotarySpringTorqueFunc)(struct cpConstraint *spring, cpFloat relativeAngle);
+ 
+-const cpConstraintClass *cpDampedRotarySpringGetClass();
++const cpConstraintClass *cpDampedRotarySpringGetClass(void);
+ 
+ typedef struct cpDampedRotarySpring {
+ 	cpConstraint constraint;
+diff -Naur ./constraints/cpDampedSpring.h /home/gengyue/constraints/cpDampedSpring.h
+--- ./constraints/cpDampedSpring.h	2020-04-09 17:53:05.000000000 +0800
++++ /home/gengyue/constraints/cpDampedSpring.h	2020-04-12 17:11:06.212380416 +0800
+@@ -23,7 +23,7 @@
+ 
+ typedef cpFloat (*cpDampedSpringForceFunc)(struct cpConstraint *spring, cpFloat dist);
+ 
+-const cpConstraintClass *cpDampedSpringGetClass();
++const cpConstraintClass *cpDampedSpringGetClass(void);
+ 
+ typedef struct cpDampedSpring {
+ 	cpConstraint constraint;
+diff -Naur ./constraints/cpGearJoint.h /home/gengyue/constraints/cpGearJoint.h
+--- ./constraints/cpGearJoint.h	2020-04-09 17:53:05.000000000 +0800
++++ /home/gengyue/constraints/cpGearJoint.h	2020-04-12 17:11:06.212380416 +0800
+@@ -19,7 +19,7 @@
+  * SOFTWARE.
+  */
+ 
+-const cpConstraintClass *cpGearJointGetClass();
++const cpConstraintClass *cpGearJointGetClass(void);
+ 
+ typedef struct cpGearJoint {
+ 	cpConstraint constraint;
+diff -Naur ./constraints/cpGrooveJoint.h /home/gengyue/constraints/cpGrooveJoint.h
+--- ./constraints/cpGrooveJoint.h	2020-04-09 17:53:05.000000000 +0800
++++ /home/gengyue/constraints/cpGrooveJoint.h	2020-04-12 17:11:06.212380416 +0800
+@@ -19,7 +19,7 @@
+  * SOFTWARE.
+  */
+ 
+-const cpConstraintClass *cpGrooveJointGetClass();
++const cpConstraintClass *cpGrooveJointGetClass(void);
+ 
+ typedef struct cpGrooveJoint {
+ 	cpConstraint constraint;
+diff -Naur ./constraints/cpPinJoint.h /home/gengyue/constraints/cpPinJoint.h
+--- ./constraints/cpPinJoint.h	2020-04-09 17:53:05.000000000 +0800
++++ /home/gengyue/constraints/cpPinJoint.h	2020-04-12 17:11:06.216380388 +0800
+@@ -19,7 +19,7 @@
+  * SOFTWARE.
+  */
+  
+-const cpConstraintClass *cpPinJointGetClass();
++const cpConstraintClass *cpPinJointGetClass(void);
+ 
+ typedef struct cpPinJoint {
+ 	cpConstraint constraint;
+diff -Naur ./constraints/cpPivotJoint.h /home/gengyue/constraints/cpPivotJoint.h
+--- ./constraints/cpPivotJoint.h	2020-04-09 17:53:05.000000000 +0800
++++ /home/gengyue/constraints/cpPivotJoint.h	2020-04-12 17:11:06.212380416 +0800
+@@ -19,7 +19,7 @@
+  * SOFTWARE.
+  */
+ 
+-const cpConstraintClass *cpPivotJointGetClass();
++const cpConstraintClass *cpPivotJointGetClass(void);
+ 
+ typedef struct cpPivotJoint {
+ 	cpConstraint constraint;
+diff -Naur ./constraints/cpRatchetJoint.h /home/gengyue/constraints/cpRatchetJoint.h
+--- ./constraints/cpRatchetJoint.h	2020-04-09 17:53:05.000000000 +0800
++++ /home/gengyue/constraints/cpRatchetJoint.h	2020-04-12 17:11:06.212380416 +0800
+@@ -19,7 +19,7 @@
+  * SOFTWARE.
+  */
+ 
+-const cpConstraintClass *cpRatchetJointGetClass();
++const cpConstraintClass *cpRatchetJointGetClass(void);
+ 
+ typedef struct cpRatchetJoint {
+ 	cpConstraint constraint;
+diff -Naur ./constraints/cpRotaryLimitJoint.h /home/gengyue/constraints/cpRotaryLimitJoint.h
+--- ./constraints/cpRotaryLimitJoint.h	2020-04-09 17:53:05.000000000 +0800
++++ /home/gengyue/constraints/cpRotaryLimitJoint.h	2020-04-12 17:11:06.212380416 +0800
+@@ -19,7 +19,7 @@
+  * SOFTWARE.
+  */
+ 
+-const cpConstraintClass *cpRotaryLimitJointGetClass();
++const cpConstraintClass *cpRotaryLimitJointGetClass(void);
+ 
+ typedef struct cpRotaryLimitJoint {
+ 	cpConstraint constraint;
+diff -Naur ./constraints/cpSimpleMotor.h /home/gengyue/constraints/cpSimpleMotor.h
+--- ./constraints/cpSimpleMotor.h	2020-04-09 17:53:05.000000000 +0800
++++ /home/gengyue/constraints/cpSimpleMotor.h	2020-04-12 17:11:06.212380416 +0800
+@@ -19,7 +19,7 @@
+  * SOFTWARE.
+  */
+ 
+-const cpConstraintClass *cpSimpleMotorGetClass();
++const cpConstraintClass *cpSimpleMotorGetClass(void);
+ 
+ typedef struct cpSimpleMotor {
+ 	cpConstraint constraint;
+diff -Naur ./constraints/cpSlideJoint.h /home/gengyue/constraints/cpSlideJoint.h
+--- ./constraints/cpSlideJoint.h	2020-04-09 17:53:05.000000000 +0800
++++ /home/gengyue/constraints/cpSlideJoint.h	2020-04-12 17:11:06.216380388 +0800
+@@ -19,7 +19,7 @@
+  * SOFTWARE.
+  */
+ 
+-const cpConstraintClass *cpSlideJointGetClass();
++const cpConstraintClass *cpSlideJointGetClass(void);
+ 
+ typedef struct cpSlideJoint {
+ 	cpConstraint constraint;

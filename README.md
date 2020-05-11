@@ -26,7 +26,7 @@ of MiniGUI 5.0.x.
 
 Note that we have changed the branch for MiniGUI 5.0.0 from `dev-4-1` to
 `rel-5-0`. If you have ever fetched the code from the branch `dev-4-1`,
-please run the following script the switch the branch to `rel-5-0`:
+please run the following script to switch the branch to `rel-5-0`:
 
 ```
 $ ./switch-to-release-branch.sh
@@ -74,8 +74,6 @@ Main enhancements of MiniGUI Core and its components are as follow:
    + Enhance the NEWGAL engine `fbcon` (the legacy Linux frame buffer) to
      support compositing schema.
    + Some new APIs.
-   + For more information, please refer to:
-     <https://github.com/VincentWei/minigui/blob/dev-4-1/RELEASE-NOTES.md>
 - mGEff, mGUtils, mGPlus, and mGNCS
    + Tune code for MiniGUI 5.0.0 or later.
    + Cleanup code for bad symbols.
@@ -90,9 +88,15 @@ Main enhancements of MiniGUI Core and its components are as follow:
    + Enhanced to use double buffering to support `SyncUpdate` method.
    + Enhanced to simulate the hardware cursors.
 
+For more information, please refer to the release notes:
+
+- MiniGUI Core: <https://github.com/VincentWei/minigui/blob/rel-5-0/RELEASE-NOTES.md>
+- mGEff: <https://github.com/VincentWei/mgeff/blob/rel-5-0/RELEASE-NOTES.md>
+- mGNCS4Touch: <https://github.com/VincentWei/mgncs4touch/blob/rel-5-0/RELEASE-NOTES.md>
+
 ### Known issues
 
-The following known issues all above hardware cursor of DRM engine:
+The following known issues all about hardware cursor of DRM engine:
 
 - `drmSetCursor2` and `drmMoveCursor` do not work correctly in DRM engine.
   Libdrm does not provide an interface to set the correct cursor plane, and
@@ -295,6 +299,19 @@ $ ./config-extern.sh
 $ make; sudo make install
 $ cd ../..
 ```
+
+## Cross Compile
+MiniGUI 5.0.x can run on lots of CPUs with different architechtures, such as
+ARM, MIPS and so on, after cross compiled. There is a directory named 
+"cross-build", in which there are some scripts for cross compile.
+
+As an example, there is a directory name "arm-r16-linux", which means: This
+directory is for ARM CPU --- r16, and the Operation System is Linux. In this
+directory, there are two scipts for download packages, and build MiniGUI 5.0.x 
+for ARM version. You can read the README.md in this directory in detail.
+
+Of course you can build your own directory for your developped CPU and OS.
+
 
 ## Change Log
 

@@ -12,6 +12,7 @@ for comp in minigui-res mg-samples minigui mgutils mgplus mgeff mgncs mgncs4touc
     echo "checkout branch $branch for $comp..."
     cd $comp
     git branch $branch && git pull && git checkout $branch
+    git branch --set-upstream-to=origin/$branch $branch
     cd ..
 done
 

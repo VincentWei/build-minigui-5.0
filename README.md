@@ -7,12 +7,13 @@ This instruction assumes that you are using Ubuntu Linux 18.04 LTS.
 - [Current Status](#current-status)
    + [Known issues](#known-issues)
    + [Upcoming features](#upcoming-features)
-- [Building MiniGUI 5.0](#building-minigui-50)
+- [Building MiniGUI](#building-minigui)
    + [Prerequisites](#prerequisites)
    + [Building steps](#building-steps)
    + [Options for build-minigui.sh script](#options-for-build-miniguish-script)
    + [Notes for demos](#notes-for-demos)
    + [Commands to build dependencies](#commands-to-build-dependencies)
+   + [Cross Compiling](#cross-compiling)
 - [Change Log](#change-log)
 - [Copying](#copying)
    + [Special Statement](#special-statement)
@@ -117,7 +118,7 @@ We plan to develop the following features in the subsequent releases:
    + Tune the input method framework for MiniGUI-Processes runtime mode,
      so that the input method engine can run as a seperate process.
 
-## Building MiniGUI 5.0
+## Building MiniGUI
 
 ### Prerequisites
 
@@ -300,7 +301,8 @@ $ make; sudo make install
 $ cd ../..
 ```
 
-## Cross Compile
+## Cross Compiling
+
 MiniGUI 5.0.x can run on lots of CPUs with different architechtures, such as
 ARM, MIPS and so on, after cross compiled. There is a directory named 
 "cross-build", in which there are some scripts for cross compile.
@@ -308,7 +310,9 @@ ARM, MIPS and so on, after cross compiled. There is a directory named
 As an example, there is a directory name "arm-r16-linux", which means: This
 directory is for ARM CPU --- r16, and the Operation System is Linux. In this
 directory, there are two scipts for download packages, and build MiniGUI 5.0.x 
-for ARM version. You can read the README.md in this directory in detail.
+for ARM version. You can read the README.md in this directory in detail:
+
+  - [arm-r16-linux](cross-build/arm-r16-linux/README.md)
 
 Of course you can build your own directory for your developped CPU and OS.
 

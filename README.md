@@ -13,7 +13,7 @@ This instruction assumes that you are using Ubuntu Linux 18.04 LTS.
    + [Options for build-minigui.sh script](#options-for-build-miniguish-script)
    + [Notes for demos](#notes-for-demos)
    + [Commands to build dependencies](#commands-to-build-dependencies)
-   + [Cross Compiling](#cross-compiling)
+   + [Cross Building](#cross-building)
 - [Change Log](#change-log)
 - [Copying](#copying)
    + [Special Statement](#special-statement)
@@ -301,7 +301,7 @@ $ make; sudo make install
 $ cd ../..
 ```
 
-## Cross Compiling
+## Cross Building
 
 MiniGUI 5.0.x can run on lots of CPUs with different architechtures, such as
 ARM, MIPS and so on, after cross compiled. There is a directory named 

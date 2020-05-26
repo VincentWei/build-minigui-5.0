@@ -1,6 +1,6 @@
 # 首届“暑期2020”项目说明
 
-![SUMMER 2020](figures/summer-2020.webp)
+![SUMMER 2020](figures/summer-2020.png)
 
 
 本文是 MiniGUI 社区参与中科院软件所发起的首届“暑期2020”活动的项目说明。

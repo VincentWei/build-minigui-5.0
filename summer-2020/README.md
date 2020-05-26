@@ -56,6 +56,7 @@
 【相关的开源软件仓库列表】
    - <https://github.com/VincentWei/build-minigui-5.0>
    - <https://github.com/VincentWei/minigui>
+   - <https://github.com/FMSoftCN/hidrmdrivers>
    - <https://github.com/FMSoftCN/himesa>
   
 ## HybridOS 图形栈增强
@@ -96,7 +97,7 @@
 
 【项目产出要求】
    - 选择一款较为流行的开源中文输入法引擎移植到 MiniGUI 环境中。
-   - 可在 Ubuntu Linux 5.0 环境中运行。
+   - 可在 Ubuntu Linux 18.04 环境中运行。
 
 【项目技术要求】
    - Linux 环境下的 C/C++ 编程

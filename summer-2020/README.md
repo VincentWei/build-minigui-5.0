@@ -2,7 +2,6 @@
 
 ![SUMMER 2020](figures/summer-2020.png)
 
-
 本文是 MiniGUI 社区参与中科院软件所发起的首届“暑期2020”活动的项目说明。
 
 ## 面向小屏幕智能设备的 MiniGUI 定制合成器
@@ -25,10 +24,12 @@
 
 【项目技术要求】
    - Linux 环境下的 C/C++ 编程
-   - MiniGUI、Cairo、OpenGL ES 等软件
+   - OpenGL ES 编程
+   - MiniGUI、Cairo、Mesa 等软件
 
 【相关的开源软件仓库列表】
    - <https://github.com/VincentWei/build-minigui-5.0>
+   - <https://github.com/VincentWei/minigui>
    - <https://github.com/FMSoftCN/hicairo>
    - <https://github.com/FMSoftCN/himesa>
   
@@ -54,6 +55,7 @@
 
 【相关的开源软件仓库列表】
    - <https://github.com/VincentWei/build-minigui-5.0>
+   - <https://github.com/VincentWei/minigui>
    - <https://github.com/FMSoftCN/himesa>
   
 ## HybridOS 图形栈增强
@@ -77,6 +79,7 @@
 
 【相关的开源软件仓库列表】
    - <https://github.com/VincentWei/build-minigui-5.0>
+   - <https://github.com/VincentWei/minigui>
    - <https://github.com/FMSoftCN/himesa>
   
 ## MiniGUI 中文输入法增强
@@ -101,25 +104,42 @@
 
 【相关的开源软件仓库列表】
    - <https://github.com/VincentWei/build-minigui-5.0>
+   - <https://github.com/VincentWei/minigui>
+   - <https://github.com/VincentWei/mg-demos>
+  
+## 将 MiniGUI 5.0 运行到 RT-Thread 或者 FreeRTOS 开发板上
+
+【项目标题】将 MiniGUI 5.0 运行到 RT-Thread 或者 FreeRTOS 开发板上
+
+【项目描述】将 MiniGUI 5.0 (Standalone 或者 Threads 模式）移植到运行 RT-Thread 或者 FreeRTOS 的开发板上。需要开发针对具体开发板的图形引擎、输入引擎等。
+
+【项目难度】低
+
+【项目社区导师】魏永明
+
+【导师联系方式】vincent@minigui.org
+
+【项目产出要求】
+   - 针对具体开发板的图形引擎及输入引擎。
+   - 运行 MiniGUI、mGNCS、mGNCS4Touch 示例程序。
+   - 如果内存配置允许，运行 mg-demos 中两个演示程序。
+
+【项目技术要求】
+   - RT-Thread 或 FreeRTOS 开发环境及 C/C++ 编程
+   - MiniGUI
+
+【相关的开源软件仓库列表】
+   - <https://github.com/VincentWei/build-minigui-5.0>
+   - <https://github.com/VincentWei/minigui>
+   - <https://github.com/VincentWei/mgncs>
+   - <https://github.com/VincentWei/mgncs4touch>
    - <https://github.com/VincentWei/mg-demos>
   
 ## 参考文档
 
-1. 项目标题：精简版的树莓派镜像
-2. 项目描述：树莓派（英语：Raspberry Pi）是基于 Linux 的单片机电脑，目的是以低价硬件及自由软件促进学校的基本计算机科学教育。树莓派需要刷写文件系统镜像来实现启动，镜像文件常常都较大，不利于快速分发和安装，本项目目标是实现一个小于 NNN MB 的树莓派镜像，并能够通过 DNF 安装软件源中更多的软件进来。
-3. 项目难度：高
-4. 项目社区导师：姓名 或 ID
-5. 导师联系方式：电子邮箱
-6. 合作导师联系方式（选填）：ID或姓名，电子邮箱
-7. 项目产出要求：
-   - 小于 NNN MB 的树莓派镜像，该镜像可刷写在树莓派 Pi 4 上
-   - 镜像中版本号信息
-   - 镜像支持 DNF 安装软件源中的软件
-8. 项目技术要求：
-   - 基本的 Linux 命令
-   - DNF/RPM 包管理
-   - 具备一种脚本语言，如 Python、Bash script 等
-   - 压缩算法
-9. 相关的开源软件仓库列表：
-   - https://gitee.com/openeuler/raspberrypi
-   - https://gitee.com/openeuler/raspberrypi-kernel
+   - [MiniGUI 5.0 发布说明](https://mp.weixin.qq.com/s?__biz=MzA5MTYwNTA3MA==&mid=2651104433&idx=1&sn=33f288b5129d7c4d35816664822b1cb4&chksm=8b89d590bcfe5c86b4551f843c6840194f67ea65388a87017bea01b9baaf5a1ee6c8e6d38f66&mpshare=1&scene=1&srcid=&sharer_sharetime=1590459093298&sharer_shareid=47aa6185bd050078ff321e79ad280097&exportkey=AYi6gDPJ%2BH5%2BwSHJ4VhUztI%3D&pass_ticket=fGB7Y%2BrNQRYaw0wXXaesS5W%2FMwNfZC7EYUJ31qr4M7MzqPbaYfkHpDmfp3974KS0#rd)
+   - [MiniGUI Overview](https://gitlab.fmsoft.cn/VincentWei/minigui-docs/blob/master/MiniGUI-Overview.md)
+   - [Writing DRM Engine Driver for Your GPU](https://gitlab.fmsoft.cn/VincentWei/minigui-docs/blob/master/supplementary-docs/Writing-DRM-Engine-Driver-for-Your-GPU.md)
+   - [Using Compositing Schema](https://gitlab.fmsoft.cn/VincentWei/minigui-docs/blob/master/supplementary-docs/Using-Compositing-Schema.md)
+   - [Integrating with GPU](https://gitlab.fmsoft.cn/VincentWei/minigui-docs/blob/master/programming-guide/MiniGUIProgGuidePart3Chapter05.md)
+

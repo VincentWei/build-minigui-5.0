@@ -4,6 +4,10 @@
 
 本文是 MiniGUI 社区参与中科院软件所和 openEuler 社区共同主办发起的“开源软件供应链点亮计划-暑期2020”活动的项目说明。
 
+若希望参与项目开发，请访问如下链接获得报名指南：
+
+<https://isrc.iscas.ac.cn/summer2020/help/student.html>
+
 ## 面向小屏幕智能设备的 MiniGUI 定制合成器
 
 【项目标题】面向小屏幕智能设备的 MiniGUI 合成器
@@ -14,7 +18,7 @@
 
 【项目社区导师】魏永明
 
-【导师联系方式】vincent@minigui.org
+【导师联系方式】summer2020@minigui.com
 
 【项目产出要求】
    - 可在 Ubuntu 18.04 上编译运行，使用 HybridOS 图形栈中的 Cairo 或者 Mesa (OpenGL ES）作为渲染引擎，实现一个定制的 MiniGUI 5.0 合成器，可参考效果：
@@ -43,7 +47,7 @@
 
 【项目社区导师】魏永明
 
-【导师联系方式】vincent@minigui.org
+【导师联系方式】summer2020@minigui.com
 
 【项目产出要求】
    - 符合 MiniGUI 5.0 DRM 引擎接口的加速引擎，可编译成动态库供 MiniGUI 在运行时动态装载。
@@ -69,7 +73,7 @@
 
 【项目社区导师】魏永明
 
-【导师联系方式】vincent@minigui.org
+【导师联系方式】summer2020@minigui.com
 
 【项目产出要求】
    - 在现有 Mesa MiniGUI backend 的实现基础上，提供符合 EGL 规范 pixel buffer 相关接口实现。
@@ -93,7 +97,7 @@
 
 【项目社区导师】魏永明
 
-【导师联系方式】vincent@minigui.org
+【导师联系方式】summer2020@minigui.com
 
 【项目产出要求】
    - 选择一款较为流行的开源中文输入法引擎移植到 MiniGUI 环境中。
@@ -118,7 +122,7 @@
 
 【项目社区导师】魏永明
 
-【导师联系方式】vincent@minigui.org
+【导师联系方式】summer2020@minigui.com
 
 【项目产出要求】
    - 针对具体开发板的图形引擎及输入引擎。
@@ -143,4 +147,9 @@
    - [Writing DRM Engine Driver for Your GPU](https://gitlab.fmsoft.cn/VincentWei/minigui-docs/blob/master/supplementary-docs/Writing-DRM-Engine-Driver-for-Your-GPU.md)
    - [Using Compositing Schema](https://gitlab.fmsoft.cn/VincentWei/minigui-docs/blob/master/supplementary-docs/Using-Compositing-Schema.md)
    - [Integrating with GPU](https://gitlab.fmsoft.cn/VincentWei/minigui-docs/blob/master/programming-guide/MiniGUIProgGuidePart3Chapter05.md)
+
+## 其他链接
+
+   - [活动官方网址](https://isrc.iscas.ac.cn/summer2020/#/index)
+   - [学生指南](https://isrc.iscas.ac.cn/summer2020/help/student.html)
 

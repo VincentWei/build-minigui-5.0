@@ -2,7 +2,7 @@
 
 This repo contains some scripts to fetch and build MiniGUI 5.0.x
 
-This instruction assumes that you are using Ubuntu Linux 18.04 LTS.
+This instruction assumes that you are using Ubuntu Linux 18.04/20.04 LTS.
 
 - [Current Status](#current-status)
    + [Known issues](#known-issues)
@@ -145,7 +145,7 @@ on your Ubuntu Linux.
    * libxml2-dev
    * libssl1.0-dev
 
-You can run the following commands to install all above software packages on Ubuntu 18.04:
+You can run the following commands to install all above software packages on Ubuntu 18.04/20.04:
 
 ```
 $ sudo apt install git g++ binutils autoconf automake libtool make cmake pkg-config

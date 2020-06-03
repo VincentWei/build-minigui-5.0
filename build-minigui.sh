@@ -7,9 +7,9 @@ fi
 source myconfig.sh
 
 build_minigui_components() {
-    for comp in mgutils mgplus mgeff mgncs mgncs4touch mg-tests mg-tools; do
+    for comp in mgutils mgplus mgeff mgncs mgncs4touch; do
         cd $comp
-        ./autogen.sh && ./configure --disable-static && make clean && make -j$NR_JOBS && sudo make install
+        ./autogen.sh && ./configure --disable-static $GOPTS && make clean && make -j$NR_JOBS && sudo make install
         if [ "$?" != "0" ]; then
             echo "====="
             echo "ERROR WHEN COMPILING '$comp' FOR $CONFOPT"
@@ -19,7 +19,7 @@ build_minigui_components() {
         cd ..
     done
 
-    for comp in mg-samples mg-demos cell-phone-ux-demo; do
+    for comp in mg-tests mg-tools mg-samples mg-demos cell-phone-ux-demo; do
         cd $comp
         ./autogen.sh && ./configure --disable-static && make clean && make -j$NR_JOBS
         if [ "$?" != "0" ]; then
@@ -36,7 +36,7 @@ build_minigui_components() {
 build_minigui_with_options() {
     CONFOPT="MiniGUI configured with $1"
     cd minigui
-    ./autogen.sh && ./configure --disable-static --enable-develmode $1 && make clean && make -j$NR_JOBS && sudo make install
+    ./autogen.sh && ./configure --disable-static $GOPTS $1 && make clean && make -j$NR_JOBS && sudo make install
     if [ "$?" != "0" ]; then
         echo "====="
         echo "ERROR WHEN COMPILING 'minigui' FOR $CONFOPT"

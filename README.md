@@ -148,7 +148,8 @@ You can run the following commands to install all above software packages on Ubu
 
 ```
 $ sudo apt install git g++ binutils autoconf automake libtool make cmake pkg-config
-$ sudo apt install libgtk2.0-dev libjpeg-dev libpng-dev libfreetype6-dev
+$ sudo apt install libgtk2.0-dev
+$ sudo apt install libjpeg-dev libpng-dev libfreetype6-dev libharfbuzz-dev
 $ sudo apt install libinput-dev libdrm-dev libsqlite3-dev libxml2-dev libssl1.0-dev
 ```
 
@@ -177,7 +178,7 @@ $ cp config.sh myconfig.sh
 $ ./fetch-all.sh
 ```
 
-1. Run `build-deps.sh` to build and install gvfb, chipmunk, and harfbuzz:
+1. Run `build-deps.sh` to build and install gvfb, chipmunk:
 
 ```
 $ ./build-deps.sh
@@ -289,29 +290,18 @@ $ make; sudo make install
 $ cd ../..
 ```
 
-1. Make and install `harfbuzz` library (DO NOT use the harfbuzz-dev package
-   which is provided by Ubuntu):
+## Cross Building
 
-```
-$ cd 3rd-party/harfbuzz
-$ ./autogen.sh
-$ ./config-extern.sh
-$ make; sudo make install
-$ cd ../..
-```
+MiniGUI 5.0.x can run on lots of CPUs with different architectures, such as
+ARM, MIPS and so on, after cross compiled. There is a directory named
+`cross-build/`, in which there are some scripts for cross building.
 
-## Cross Compile
-MiniGUI 5.0.x can run on lots of CPUs with different architechtures, such as
-ARM, MIPS and so on, after cross compiled. There is a directory named 
-"cross-build", in which there are some scripts for cross compile.
+As an example, there is a directory name `arm-r16-linux`, which means: This
+directory is for ARM-based SoC `r16`, and the operating system is Linux. In this
+directory, there are two scripts for download packages, and build MiniGUI 5.0.x 
+for ARM version. You can read the `README.md` in this directory in detail.
 
-As an example, there is a directory name "arm-r16-linux", which means: This
-directory is for ARM CPU --- r16, and the Operation System is Linux. In this
-directory, there are two scipts for download packages, and build MiniGUI 5.0.x 
-for ARM version. You can read the README.md in this directory in detail.
-
-Of course you can build your own directory for your developped CPU and OS.
-
+Of course you can build your own directory for your CPU and OS.
 
 ## Change Log
 

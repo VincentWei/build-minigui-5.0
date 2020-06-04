@@ -22,7 +22,7 @@ This instruction assumes that you are using Ubuntu Linux 18.04/20.04 LTS.
 
 ## Current Status
 
-Currently, the latest official releas of MiniGUI 5.0 is version 5.0.2.
+Currently, the latest official release of MiniGUI 5.0 is version 5.0.2.
 
 Main enhancements of MiniGUI Core and its components are as follow:
 

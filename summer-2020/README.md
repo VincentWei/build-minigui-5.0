@@ -25,6 +25,7 @@
      - 智能手机。
      - 中高档轿车中的车载娱乐系统。
    - 可整合 mgdemo、mguxdemo 等 MiniGUI 已有示例程序或者演示程序中的代码。注：这些代码均以 Apache 2.0 许可证发布。
+   - 推荐使用 Apache 2.0 许可证。
 
 【项目技术要求】
    - Linux 环境下的 C/C++ 编程
@@ -52,6 +53,8 @@
 【项目产出要求】
    - 符合 MiniGUI 5.0 DRM 引擎接口的加速引擎，可编译成动态库供 MiniGUI 在运行时动态装载。
    - 提供对显存管理、矩形填充、位块传输（Blitting）等的加速支持。
+   - 在 [hiDRMDrier](https://github.com/FMSoftCN/hidrmdrivers) 基础上完成开发工作。
+   - 继承 hiDRMDriver 使用的 MIT 许可证。
 
 【项目技术要求】
    - Linux 环境下的 C/C++ 编程
@@ -77,6 +80,8 @@
 
 【项目产出要求】
    - 在现有 Mesa MiniGUI backend 的实现基础上，提供符合 EGL 规范 pixel buffer 相关接口实现。
+   - 在 [hiMesa](https://github.com/FMSoftCN/himesa) 基础上完成开发工作。
+   - 继承 hiMesa 使用的 MIT 许可证。
 
 【项目技术要求】
    - Linux 环境下的 C/C++ 编程
@@ -102,6 +107,7 @@
 【项目产出要求】
    - 选择一款较为流行的开源中文输入法引擎移植到 MiniGUI 环境中。
    - 可在 Ubuntu Linux 18.04 环境中运行。
+   - 推荐使用 Apache 2.0 许可证。
 
 【项目技术要求】
    - Linux 环境下的 C/C++ 编程
@@ -128,6 +134,7 @@
    - 针对具体开发板的图形引擎及输入引擎。
    - 运行 MiniGUI、mGNCS、mGNCS4Touch 示例程序。
    - 如果内存配置允许，运行 mg-demos 中两个演示程序。
+   - 推荐使用 Apache 2.0 许可证。
 
 【项目技术要求】
    - RT-Thread 或 FreeRTOS 开发环境及 C/C++ 编程

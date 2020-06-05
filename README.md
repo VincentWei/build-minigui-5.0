@@ -26,6 +26,8 @@ Currently, the latest official release of MiniGUI 5.0 is version 5.0.2.
 
 Main enhancements of MiniGUI Core and its components are as follow:
 
+- Code tuned for GCC 9.3, so that you can build MiniGUI on Ubuntu 20.04 or
+  other Linux distributions which use GCC 9 or later.
 - MiniGUI Core:
    + Support for compositing schema under MiniGUI-Processes runtime mode.
      This feature brings the exciting visual effects which are popular
@@ -65,6 +67,7 @@ Main enhancements of MiniGUI Core and its components are as follow:
      layer.
    + Enhance the NEWGAL engine `fbcon` (the legacy Linux frame buffer) to
      support compositing schema.
+   + Use upstream harfbuzz instead of the modified harfbuzz.
    + Some new APIs.
 - mGEff, mGUtils, mGPlus, and mGNCS
    + Tune code for MiniGUI 5.0.0 or later.

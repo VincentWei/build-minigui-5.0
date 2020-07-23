@@ -10,7 +10,7 @@ source myconfig.sh
 cd gvfb; git remote set-url origin $REPO_URL/gvfb.git; cd ..
 
 # The third-party libraries
-for comp in harfbuzz chipmunk; do
+for comp in chipmunk; do
     cd 3rd-party/$comp; git remote set-url origin $REPO_URL/$comp.git; cd ../..
 done
 

@@ -10,7 +10,7 @@ source myconfig.sh
 git clone $REPO_URL/gvfb.git
 
 # The third-party libraries
-for comp in harfbuzz chipmunk; do
+for comp in chipmunk; do
     cd 3rd-party; git clone $REPO_URL/$comp.git; cd ..
 done
 

@@ -35,7 +35,7 @@ for comp in minigui minigui-res mgutils mgplus mgeff mgncs mg-tests mg-samples m
 done
 
 echo MAKE TARBALLS OF THIRD-PARTY PACKAGES
-for comp in chipmunk harfbuzz; do
+for comp in chipmunk; do
     cd 3rd-party/$comp
     make dist || make package_source
     mv *.tar.[xgb]z* ../..

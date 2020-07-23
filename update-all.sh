@@ -11,7 +11,7 @@ echo Updating gvfb
 cd gvfb; git pull; cd ..
 
 # The third-party libraries
-for comp in harfbuzz chipmunk; do
+for comp in chipmunk; do
     echo Updating $comp
     cd 3rd-party/$comp; git pull; cd ../..
 done

@@ -20,7 +20,7 @@ REPO_URL=https://gitlab.fmsoft.cn/VincentWei
 #
 # The branch name; MiniGUI 5.0 is in preview stage, and the code is
 # located in dev-4-1 branch
-BRANCH_NAME=dev-4-1
+BRANCH_NAME=rel-5-0
 
 #
 # Global configuration options for MiniGUI Core and components.

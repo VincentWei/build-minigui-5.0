@@ -5,24 +5,24 @@ This repo contains some scripts to fetch and build MiniGUI 5.0.x
 This instruction assumes that you are using Ubuntu Linux 18.04/20.04 LTS.
 
 - [Current Status](#current-status)
+   + [Changes in Version 5.0.x](#changes-in-version-50x)
    + [Known issues](#known-issues)
    + [Upcoming features](#upcoming-features)
 - [Building MiniGUI](#building-minigui)
    + [Prerequisites](#prerequisites)
    + [Building steps](#building-steps)
-   + [Options for build-minigui.sh script](#options-for-build-miniguish-script)
+   + [Options for build-minigui.sh script](#options-for-build_miniguish-script)
    + [Notes for demos](#notes-for-demos)
    + [Commands to build dependencies](#commands-to-build-dependencies)
-   + [Cross Building](#cross-building)
+- [Cross Building](#cross-building)
 - [Change Log](#change-log)
 - [Copying](#copying)
    + [Special Statement](#special-statement)
    + [Other Notes](#other-notes)
 
-
 ## Current Status
 
-Currently, the latest official release of MiniGUI 5.0 is version 5.0.2.
+Currently, the latest official release of MiniGUI 5.0 is version 5.0.3.
 
 Main enhancements of MiniGUI Core and its components are as follow:
 
@@ -88,6 +88,13 @@ For more information, please refer to the release notes:
 - MiniGUI Core: <https://github.com/VincentWei/minigui/blob/rel-5-0/RELEASE-NOTES.md>
 - mGEff: <https://github.com/VincentWei/mgeff/blob/rel-5-0/RELEASE-NOTES.md>
 - mGNCS4Touch: <https://github.com/VincentWei/mgncs4touch/blob/rel-5-0/RELEASE-NOTES.md>
+
+### Changes in Version 5.0.x
+
+1. Version 5.0.3
+   - MiniGUI Core: Fixed a few minor bugs and made some enhancements.
+   - mg-tests: Merge `comm-engines-freertos` from @ehello for FreeRTOS.
+   - mg-demos: Merge `softkbd2` from @Iorest to use RIME input engine.
 
 ### Known issues
 

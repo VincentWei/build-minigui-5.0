@@ -19,7 +19,19 @@ build_minigui_components() {
         cd ..
     done
 
-    for comp in mg-tests mg-tools mg-samples mg-demos cell-phone-ux-demo; do
+    for comp in mg-tools; do
+        cd $comp
+        ./autogen.sh && ./configure --disable-static && make clean && make -j$NR_JOBS && sudo make install
+        if [ "$?" != "0" ]; then
+            echo "====="
+            echo "ERROR WHEN COMPILING '$comp' FOR $CONFOPT"
+            echo "====="
+            exit 1
+        fi
+        cd ..
+    done
+
+    for comp in mg-tests mg-samples mg-demos cell-phone-ux-demo; do
         cd $comp
         ./autogen.sh && ./configure --disable-static && make clean && make -j$NR_JOBS
         if [ "$?" != "0" ]; then

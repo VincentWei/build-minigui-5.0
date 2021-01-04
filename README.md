@@ -91,6 +91,10 @@ For more information, please refer to the release notes:
 
 ### Changes in Version 5.0.x
 
+1. Version 5.0.5
+   - MiniGUI Core: Adjust values of `WS_XXX` to avoid conflict.
+1. Version 5.0.4
+   - MiniGUI Core: Fixed a few minor bugs and add a new IAL engine for single touch screen.
 1. Version 5.0.3
    - MiniGUI Core: Fixed a few minor bugs and made some enhancements.
    - mg-tests: Merge `comm-engines-freertos` from @ehello for FreeRTOS.

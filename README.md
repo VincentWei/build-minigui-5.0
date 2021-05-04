@@ -92,7 +92,7 @@ For more information, please refer to the release notes:
 ### Changes in Version 5.0.x
 
 1. Version 5.0.6
-   - MiniGUI Core: Optimize FillBox, BitBlt, and StretchBlt by using libpixman.
+   - MiniGUI Core: Enhancement and optimize FillBox, BitBlt, and StretchBlt by using Pixman.
    - MiniGUI Core: Animations when switching layers for the compositing schema.
    - minigui-res: add fine-tuned Chinese font from iekie.
 1. Version 5.0.5

@@ -167,10 +167,10 @@ check_with_options() {
 
 OPTIONS=( \
     "sa" \
-    "sa virtualwindow" \
+    "sa virtualwindow -pixman" \
     "ths" \
-    "ths incoreres -cursor" \
-    "procs compositing" \
+    "ths incoreres -cursor -pixman" \
+    "procs compositing -pixman" \
     "sa incoreres -cursor virtualwindow" \
     "sa -cursor -updateregion" \
     "ths -cursor" \

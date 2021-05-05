@@ -11,7 +11,7 @@ source myconfig.sh
 for comp in minigui-res mg-samples minigui mgutils mgplus mgeff mgncs mgncs4touch mg-tests mg-demos; do
     echo "merge $branch to master for $comp..."
     cd $comp
-    git checkout master && git merge $branch
+    git checkout master && git merge $branch && git push
     cd ..
 done
 

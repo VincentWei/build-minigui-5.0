@@ -7,7 +7,7 @@
 #
 # The URL prefix of remote repository.
 
-# Use this if you want to visit the repos on gitlab.fmsoft.cn via HTTPS
+# Use this if you want to use the repos on gitlab.fmsoft.cn via HTTPS (recommended)
 REPO_URL=https://gitlab.fmsoft.cn/VincentWei
 
 # Use this one if you are a developer of MiniGUI

@@ -182,6 +182,15 @@ $ cd build-minigui-5.0/
 $ cp config.sh myconfig.sh
 ```
 
+Note that we found the mirrors from our GibLab repositories to GitHub were often broken
+due to the well known fire wall. So you can change your `myconfig.sh` file to
+use our GibLat site directly:
+
+```
+# Use this if you want to use our GitLab site via HTTPS
+REPO_URL=https://gitlab.fmsoft.cn/VincentWei
+```
+
 1. Run `fetch-all.sh` to fetch all source from GitHub:
 
 ```

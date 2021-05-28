@@ -8,15 +8,19 @@ source myconfig.sh
 
 echo "BUILDING gvfb"
 cd gvfb
-cmake .
+mkdir build
+cd build
+cmake ..
 make -j$NR_JOBS; sudo make install
-cd ..
+cd ../..
 
 echo "BUILDING chipmunk"
 cd 3rd-party/chipmunk
-cmake .
+mkdir build
+cd build
+cmake ..
 make -j$NR_JOBS; sudo make install
-cd ../..
+cd ../../..
 
 echo "INSTALL MiniGUI resource files"
 cd minigui-res/

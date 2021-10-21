@@ -22,7 +22,7 @@ This instruction assumes that you are using Ubuntu Linux 18.04/20.04 LTS.
 
 ## Current Status
 
-Currently, the latest official release of MiniGUI is version 5.0.6.
+Currently, the latest official release of MiniGUI is version 5.0.8.
 
 Main enhancements of MiniGUI Core and its components are as follow:
 
@@ -68,6 +68,7 @@ Main enhancements of MiniGUI Core and its components are as follow:
    + Enhance the NEWGAL engine `fbcon` (the legacy Linux frame buffer) to
      support compositing schema.
    + Use upstream harfbuzz instead of the modified harfbuzz.
+   + Support for WebP image files.
    + Some new APIs.
 - mGEff, mGUtils, mGPlus, and mGNCS
    + Tune code for MiniGUI 5.0.0 or later.
@@ -77,6 +78,7 @@ Main enhancements of MiniGUI Core and its components are as follow:
    + Tune the speed meter.
    + Enhance `ScrollViewPiece` and `HScrollViewPiece`.
 - mg-tests:
+   + Add a new test program for various image files in `images/` directory.
    + Add new test programs for MiniGUI 5.0.0 in `5.0/` directory.
    + Add new test programs for compositing schema in `compositor/` directory.
 - gvfb:

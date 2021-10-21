@@ -1,6 +1,6 @@
 #!/bin/bash
 
-tag=ver-5-0-6
+tag=ver-5-0-8
 
 if [ ! -f myconfig.sh ]; then
     cp config.sh myconfig.sh

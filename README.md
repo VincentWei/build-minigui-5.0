@@ -94,12 +94,12 @@ For more information, please refer to the release notes:
 ### Changes in Version 5.0.x
 
 1. Version 5.0.8
-  - MiniGUI Core:
-    * Support for WebP image format based on libwebp.
-    * Support for two ARM64-based hardware platforms: PX30 and R818.
-    * New surface pixel format for main window: `ST_PIXEL_XRGB565` under compositing schema.
-    * Some optimizations and tunnings.
-  - minigui-test: new test program for loading various images.
+   - MiniGUI Core:
+      * Support for WebP image format based on libwebp.
+      * Support for two ARM64-based hardware platforms: PX30 and R818.
+      * New surface pixel format for main window: `ST_PIXEL_XRGB565` under compositing schema.
+      * Some optimizations and tunnings.
+   - minigui-test: new test program for loading various images.
 1. Version 5.0.6
    - MiniGUI Core: Enhancement and optimize FillBox, BitBlt, and StretchBlt by using Pixman.
    - MiniGUI Core: Animations when switching layers for the compositing schema.

@@ -22,7 +22,7 @@ This instruction assumes that you are using Ubuntu Linux 18.04/20.04 LTS.
 
 ## Current Status
 
-Currently, the latest official release of MiniGUI is version 5.0.8.
+Currently, the latest official release of MiniGUI is version 5.0.9.
 
 Main enhancements of MiniGUI Core and its components are as follow:
 
@@ -93,6 +93,10 @@ For more information, please refer to the release notes:
 
 ### Changes in Version 5.0.x
 
+1. Version 5.0.9
+   - MiniGUI Core:
+      * Fix a crash bug in `InitSubDC()`.
+   - mgncs4touch: remove `settingtableview` sample.
 1. Version 5.0.8
    - MiniGUI Core:
       * Support for WebP image format based on libwebp.

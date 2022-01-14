@@ -93,7 +93,7 @@ For more information, please refer to the release notes:
 
 ### Changes in Version 5.0.x
 
-1. Version 5.0.9
+1. Version 5.0.9 (2022-01-14)
    - MiniGUI Core:
       * Fix a crash bug in `InitSubDC()`.
    - mgncs4touch: remove `settingtableview` sample.

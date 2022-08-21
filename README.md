@@ -93,6 +93,11 @@ For more information, please refer to the release notes:
 
 ### Changes in Version 5.0.x
 
+1. Version 5.0.10 (2022-08-31)
+   - MiniGUI Core:
+      * Enhance `fbcon` engine to use double buffering and `SyncUpdate` method.
+      * Cleanup and enhance `shadow` engine to use `SyncUpdate` method.
+   - Fix some compilation warnings/errors against GCC 12.
 1. Version 5.0.9 (2022-01-14)
    - MiniGUI Core:
       * Fix a crash bug in `InitSubDC()`.

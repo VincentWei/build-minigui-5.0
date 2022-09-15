@@ -22,12 +22,12 @@ This instruction assumes that you are using Ubuntu Linux 18.04/20.04 LTS.
 
 ## Current Status
 
-Currently, the latest official release of MiniGUI is version 5.0.9.
+Currently, the latest official release of MiniGUI is version 5.0.10.
 
 Main enhancements of MiniGUI Core and its components are as follow:
 
-- Code tuned for GCC 9.3, so that you can build MiniGUI on Ubuntu 20.04 or
-  other Linux distributions which use GCC 9 or later.
+- Code tuned for GCC 9.3+, so that you can build MiniGUI on Ubuntu 20.04/22.04
+  or other Linux distributions which use GCC 9 or later.
 - MiniGUI Core:
    + Support for compositing schema under MiniGUI-Processes runtime mode.
      This feature brings the exciting visual effects which are popular
@@ -93,10 +93,11 @@ For more information, please refer to the release notes:
 
 ### Changes in Version 5.0.x
 
-1. Version 5.0.10 (2022-08-31)
+1. Version 5.0.10 (2022-09-15)
    - MiniGUI Core:
       * Enhance `fbcon` engine to use double buffering and `SyncUpdate` method.
       * Cleanup and enhance `shadow` engine to use `SyncUpdate` method.
+   - Fix a deadlock bug for Threads mode.
    - Fix some compilation warnings/errors against GCC 12.
 1. Version 5.0.9 (2022-01-14)
    - MiniGUI Core:
@@ -349,7 +350,7 @@ core, components, and demonstration apps.
 
 ## Copying
 
-Copyright (C) 2018 ~ 2020 Beijing FMSoft Technologies Co., Ltd.
+Copyright (C) 2018 ~ 2022 Beijing FMSoft Technologies Co., Ltd.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by

@@ -144,6 +144,16 @@ check_minigui_with_options() {
     else
         check_minigui_components
     fi
+
+    cd mg-tests
+    ./run-auto-tests.sh
+    if [ "$?" != "0" ]; then
+        echo "====="
+        echo "ERROR WHEN RUNNING mg-tests FOR $RUNMODE"
+        echo "====="
+        exit 1
+    fi
+    cd ..
 }
 
 check_with_options() {

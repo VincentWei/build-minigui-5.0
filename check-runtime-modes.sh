@@ -179,21 +179,23 @@ OPTIONS=( \
     "sa" \
     "sa virtualwindow -pixman" \
     "ths" \
-    "ths incoreres -cursor -pixman" \
-    "procs compositing -pixman" \
+    "procs" \
+    "procs -compositing virtualwindow" \
+    "procs compositing virtualwindow" \
     "sa incoreres -cursor virtualwindow" \
     "sa -cursor -updateregion" \
     "ths -cursor" \
     "ths incoreres" \
+    "ths incoreres -cursor -pixman" \
     "ths incoreres -cursor -updateregion" \
     "procs -compositing" \
     "procs -compositing incoreres" \
     "procs -compositing incoreres -cursor" \
+    "procs compositing -pixman" \
     "procs compositing -cursor" \
     "procs compositing incoreres" \
     "procs compositing incoreres -cursor" \
     "procs compositing -updateregion" \
-    "procs compositing virtualwindow" \
 )
 
 if [ $# == 0 ]; then

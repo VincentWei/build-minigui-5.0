@@ -2,7 +2,7 @@
 
 This repo contains some scripts to fetch and build MiniGUI 5.0.x
 
-This instruction assumes that you are using Ubuntu Linux 18.04/20.04 LTS.
+This instruction assumes that you are using Ubuntu Linux 18.04/20.04/22.04 LTS.
 
 - [Current Status](#current-status)
    + [Changes in Version 5.0.x](#changes-in-version-50x)
@@ -78,8 +78,10 @@ Main enhancements of MiniGUI Core and its components are as follow:
    + Tune the speed meter.
    + Enhance `ScrollViewPiece` and `HScrollViewPiece`.
 - mg-tests:
+   + ADD the `run-auto-tests.sh` script to run some tests automatically.
+   + Add new test programs in `api/` directory.
    + Add a new test program for various image files in `images/` directory.
-   + Add new test programs for MiniGUI 5.0.0 in `5.0/` directory.
+   + Add new test programs for new APIs of MiniGUI 5.0.x in `5.0/` directory.
    + Add new test programs for compositing schema in `compositor/` directory.
 - gvfb:
    + Enhanced to use double buffering to support `SyncUpdate` method.
@@ -93,12 +95,15 @@ For more information, please refer to the release notes:
 
 ### Changes in Version 5.0.x
 
-1. Version 5.0.10 (2022-09-15)
+1. Version 5.0.10 (2022-09-30)
    - MiniGUI Core:
-      * Enhance `fbcon` engine to use double buffering and `SyncUpdate` method.
-      * Cleanup and enhance `shadow` engine to use `SyncUpdate` method.
-   - Fix a deadlock bug for Threads mode.
-   - Fix some compilation warnings/errors against GCC 12.
+      + Enhance `fbcon` engine to use double buffering and `SyncUpdate` method.
+      + Cleanup and enhance `shadow` engine to use `SyncUpdate` method.
+      + Fix some bugs for Threads mode and virtual window.
+      + Fix some compilation warnings/errors against GCC 12.
+   - mg-tests:
+      + Add the `run-auto-tests.sh` script to run some tests automatically.
+      + Add new test programs in `api/` directory.
 1. Version 5.0.9 (2022-01-14)
    - MiniGUI Core:
       * Fix a crash bug in `InitSubDC()`.

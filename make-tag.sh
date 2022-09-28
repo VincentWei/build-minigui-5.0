@@ -13,5 +13,6 @@ for comp in minigui-res mg-samples minigui mgutils mgplus mgeff mgncs mgncs4touc
     cd $comp
     git tag $tag
     git push --tags
+    git push --tags github
     cd ..
 done

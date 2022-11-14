@@ -192,7 +192,7 @@ On Fedora use
 ```
 $ sudo dnf install git gcc-c++ binutils autoconf automake libtool make cmake pkgconf
 $ sudo dnf install gtk2-devel
-$ sudo dnf install libjpeg-devel libpng-devel libfreetype-devel harfbuzz-devel
+$ sudo dnf install libjpeg-devel libpng-devel freetype-devel harfbuzz-devel
 $ sudo dnf install libinput-devel libdrm-devel sqlite-devel libxml2-devel openssl1.1-devel
 ```
 

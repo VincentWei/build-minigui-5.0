@@ -187,7 +187,16 @@ $ sudo apt install libjpeg-dev libpng-dev libfreetype6-dev libharfbuzz-dev
 $ sudo apt install libinput-dev libdrm-dev libsqlite3-dev libxml2-dev libssl1.0-dev
 ```
 
-Note that the `libgtk2.0-dev` packages is used by the virtual frame buffer program `gvfb`.
+On Fedora use
+
+```
+$ sudo dnf install git gcc-c++ binutils autoconf automake libtool make cmake pkgconf
+$ sudo dnf install gtk2-devel
+$ sudo dnf install libjpeg-devel libpng-devel libfreetype-devel harfbuzz-devel
+$ sudo dnf install libinput-devel libdrm-devel sqlite-devel libxml2-devel openssl1.1-devel
+```
+
+Note that the `gtk2` package is used by the virtual frame buffer program `gvfb`.
 
 ### Building steps
 

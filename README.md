@@ -170,21 +170,22 @@ on your Ubuntu Linux.
 * Dependent libraries:
    * libgtk2.0-dev
    * libjpeg-dev
-   * libpng-dev (libpng12-dev on Ubuntu Linux 16.04 instead)
+   * libpng-dev
+   * libwebp-dev
    * libfreetype6-dev
    * libinput-dev
    * libdrm-dev
    * libsqlite3-dev
    * libxml2-dev
-   * libssl1.0-dev
+   * libssl-dev
 
-You can run the following commands to install all above software packages on Ubuntu 18.04/20.04:
+You can run the following commands to install all above software packages on Ubuntu 18.04/20.04/22.04:
 
 ```
 $ sudo apt install git g++ binutils autoconf automake libtool make cmake pkg-config
 $ sudo apt install libgtk2.0-dev
-$ sudo apt install libjpeg-dev libpng-dev libfreetype6-dev libharfbuzz-dev
-$ sudo apt install libinput-dev libdrm-dev libsqlite3-dev libxml2-dev libssl1.0-dev
+$ sudo apt install libjpeg-dev libpng-dev libwebp-dev libfreetype-dev libharfbuzz-dev
+$ sudo apt install libinput-dev libdrm-dev libsqlite3-dev libxml2-dev libssl-dev
 ```
 
 On Fedora use
@@ -192,8 +193,8 @@ On Fedora use
 ```
 $ sudo dnf install git gcc-c++ binutils autoconf automake libtool make cmake pkgconf
 $ sudo dnf install gtk2-devel
-$ sudo dnf install libjpeg-devel libpng-devel freetype-devel harfbuzz-devel
-$ sudo dnf install libinput-devel libdrm-devel sqlite-devel libxml2-devel openssl1.1-devel
+$ sudo dnf install libjpeg-devel libpng-devel libwebp-devel freetype-devel harfbuzz-devel
+$ sudo dnf install libinput-devel libdrm-devel sqlite-devel libxml2-devel openssl-devel
 ```
 
 Note that the `gtk2` package is used by the virtual frame buffer program `gvfb`.

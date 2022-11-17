@@ -309,6 +309,9 @@ $ cd cell-phone-ux-demo/
 $ ./mguxdemo
 ```
 
+Also note that if you choose a different location to install `gvfb`, be sure
+to update `exec_file` in `MiniGUI.cfg`.
+
 ### Commands to build dependencies
 
 The following steps are those ones in `build-deps.sh`. We list them here just

@@ -95,6 +95,9 @@ For more information, please refer to the release notes:
 
 ### Changes in Version 5.0.x
 
+1. Version 5.0.11 (2022-12-31)
+   - MiniGUI Core:
+      + Fix some bugs.
 1. Version 5.0.10 (2022-09-30)
    - MiniGUI Core:
       + Enhance `fbcon` engine to use double buffering and `SyncUpdate` method.
@@ -355,7 +358,7 @@ ARM, MIPS and so on, after cross compiled. There is a directory named
 As an example, there is a directory name `arm-r16-linux`, which means: This
 directory is for ARM-based SoC `r16`, and the operating system is Linux. In this
 directory, there are two scripts for download packages, and build MiniGUI 5.0.x 
-for ARM version. You can read the `README.md` in this directory in detail:
+for ARM version. You can read the `README.md` in this directory for details:
 
   - [arm-r16-linux](cross-build/arm-r16-linux/README.md)
 

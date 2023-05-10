@@ -22,7 +22,7 @@ This instruction assumes that you are using Ubuntu Linux 18.04/20.04/22.04 LTS.
 
 ## Current Status
 
-Currently, the latest official release of MiniGUI is version 5.0.11.
+Currently, the latest official release of MiniGUI is version 5.0.12.
 
 Main enhancements of MiniGUI Core and its components are as follow:
 
@@ -95,6 +95,14 @@ For more information, please refer to the release notes:
 
 ### Changes in Version 5.0.x
 
+1. Version 5.0.12 (2023-05-10)
+   - MiniGUI Core:
+      + Implement new APIs: `GetACharsExtentPointEx()`, `GetTabbedACharsExtent()`, `GetTabbedACharsExtentPoint()`, and `GetTabbedACharsExtentPointEx()`.
+      + Enhance `GetTextExtentPoint()` and `GetTabbedTextExtentPoint()` to support BIDI charsets.
+      + Tune management of tick count.
+      + Fix a typo: `Achar2UChar()` to `AChar2UChar()`.
+   - mGPlus: Tune code for C++ 17.
+   - mGEff: Fix missing headers in `Makefile.am`.
 1. Version 5.0.11 (2022-12-31)
    - MiniGUI Core:
       + Fix some bugs.

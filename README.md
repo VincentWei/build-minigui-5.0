@@ -2,7 +2,7 @@
 
 This repo contains some scripts to fetch and build MiniGUI 5.0.x
 
-This instruction assumes that you are using Ubuntu Linux 18.04/20.04/22.04 LTS.
+This instruction assumes that you are using Ubuntu Linux 18.04/20.04/22.04/24.04 LTS.
 
 - [Current Status](#current-status)
    + [Changes in Version 5.0.x](#changes-in-version-50x)
@@ -22,11 +22,11 @@ This instruction assumes that you are using Ubuntu Linux 18.04/20.04/22.04 LTS.
 
 ## Current Status
 
-Currently, the latest official release of MiniGUI is version 5.0.12.
+Currently, the latest official release of MiniGUI is version 5.0.15.
 
 Main enhancements of MiniGUI Core and its components are as follow:
 
-- Code tuned for GCC 9.3+, so that you can build MiniGUI on Ubuntu 20.04/22.04
+- Code tuned for GCC 9.3+, so that you can build MiniGUI on Ubuntu 20.04/22.04/24.04
   or other Linux distributions which use GCC 9 or later.
 - MiniGUI Core:
    + Support for compositing schema under MiniGUI-Processes runtime mode.
@@ -95,6 +95,11 @@ For more information, please refer to the release notes:
 
 ### Changes in Version 5.0.x
 
+1. Version 5.0.15 (2025-05-09)
+   - MiniGUI Core:
+      + Optimize NEWGAL engines: `shadow`, `drm`, and `fbcon` for large resolution.
+      + New APIs: `GetWindowSharedSurfaceFD()` and `CreateMemDCFromSharedSurfaceFD()` for compositing schema.
+      + Tune timer module.
 1. Version 5.0.12 (2023-05-10)
    - MiniGUI Core:
       + Implement new APIs: `GetACharsExtentPointEx()`, `GetTabbedACharsExtent()`, `GetTabbedACharsExtentPoint()`, and `GetTabbedACharsExtentPointEx()`.
@@ -221,22 +226,28 @@ $ git clone https://github.com/VincentWei/build-minigui-5.0.git
 $ cd build-minigui-5.0/
 ```
 
+or
+
+```
+$ git clone https://gitee.com/vincentwei7/build-minigui-5.0.git
+$ cd build-minigui-5.0/
+```
+
 1. Copy `config.sh` to `myconfig.sh` and edit `myconfig.sh` to match your needs:
 
 ```
 $ cp config.sh myconfig.sh
 ```
 
-Note that we found the mirrors from our GitLab repositories to GitHub were often broken
-due to the well known fire wall. So you can change your `myconfig.sh` file to
-use our [GitLab site](https://gitlab.fmsoft.cn/) directly:
+Please kindly change your `myconfig.sh` file to use Gitee if you
+are in China mainland, due to the well known fire wall:
 
 ```
-# Use this if you want to use our GitLab site via HTTPS
-REPO_URL=https://gitlab.fmsoft.cn/VincentWei
+# Use this if you want to visit the repos on gitee.com via HTTPS
+REPO_URL=https://gitee.com/vincentwei7
 ```
 
-1. Run `fetch-all.sh` to fetch all source from GitHub:
+1. Run `fetch-all.sh` to fetch all source from GitHub or Gitee:
 
 ```
 $ ./fetch-all.sh
@@ -379,7 +390,7 @@ core, components, and demonstration apps.
 
 ## Copying
 
-Copyright (C) 2018 ~ 2022 Beijing FMSoft Technologies Co., Ltd.
+Copyright (C) 2018 ~ 2025 Beijing FMSoft Technologies Co., Ltd.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by

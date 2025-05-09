@@ -1,6 +1,6 @@
 #!/bin/bash
 
-tag=ver-5-0-12
+tag=ver-5-0-15
 
 if [ ! -f myconfig.sh ]; then
     cp config.sh myconfig.sh
@@ -14,5 +14,6 @@ for comp in minigui-res mg-samples minigui mgutils mgplus mgeff mgncs mgncs4touc
     git tag $tag
     git push --tags
     git push --tags github
+    git push --tags gitee
     cd ..
 done

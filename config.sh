@@ -7,17 +7,20 @@
 #
 # The URL prefix of remote repository.
 
-# Use this if you want to use the repos on gitlab.fmsoft.cn via HTTPS (recommended)
-REPO_URL=https://gitlab.fmsoft.cn/VincentWei
+# Use this if you want to visit the repos on gitee.com via HTTPS (recommended)
+REPO_URL=https://gitee.com/vincentwei7
 
-# Use this one if you are a developer of MiniGUI
-# REPO_URL=git4os@gitlab.fmsoft.cn:VincentWei
+# Use this if you want to visit the repos on gitee.com via SSH
+# REPO_URL=git@gitee.com:vincentwei7
 
 # Use this if you want to visit GitHub via HTTPS
 # REPO_URL=https://github.com/VincentWei
 
 # Use this one if you can visit GitHub via SSH
 # REPO_URL=git@github.com:VincentWei
+
+# Use this one if you are a developer of MiniGUI
+# REPO_URL=git4os@gitlab.fmsoft.cn:VincentWei
 
 #
 # The branch name

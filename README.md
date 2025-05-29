@@ -22,7 +22,7 @@ This instruction assumes that you are using Ubuntu Linux 18.04/20.04/22.04/24.04
 
 ## Current Status
 
-Currently, the latest official release of MiniGUI is version 5.0.15.
+Currently, the latest official release of MiniGUI is version 5.0.16.
 
 Main enhancements of MiniGUI Core and its components are as follow:
 
@@ -95,6 +95,12 @@ For more information, please refer to the release notes:
 
 ### Changes in Version 5.0.x
 
+1. Version 5.0.16 (2025-05-29)
+   - MiniGUI Core:
+      + Fix some bugs.
+      + Tune `configure.ac` for the latest autotools.
+   - MiniGUI Components:
+      + Tune `configure.ac` for the latest autotools.
 1. Version 5.0.15 (2025-05-09)
    - MiniGUI Core:
       + Optimize NEWGAL engines: `shadow`, `drm`, and `fbcon` for large resolution.

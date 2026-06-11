@@ -7,14 +7,8 @@
 #
 # The URL prefix of remote repository.
 
-# Use this if you want to visit the repos on gitee.com via HTTPS (recommended)
-REPO_URL=https://gitee.com/vincentwei7
-
-# Use this if you want to visit the repos on gitee.com via SSH
-# REPO_URL=git@gitee.com:vincentwei7
-
-# Use this if you want to visit GitHub via HTTPS
-# REPO_URL=https://github.com/VincentWei
+# Use this if you want to visit GitHub via HTTPS (recommended)
+REPO_URL=https://github.com/VincentWei
 
 # Use this one if you can visit GitHub via SSH
 # REPO_URL=git@github.com:VincentWei
